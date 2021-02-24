@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Cup</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://kit.fontawesome.com/5548df1258.js" crossorigin="anonymous"></script>
+    <script src="scripts/dropdown.js" type="text/javascript"></script>
+    <script src="scripts/countdown.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- Start of Header -->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <!-- Left Nav - Twitch & YouTube logos/links -->
+            <section class="nav-container">
+                <a href="https://www.twitch.tv/t90official" target="_blank"><img id="T90Official" src="logos/t90official.png" alt="T90Official" width="50" height="50"></a>
+                <a href="https://www.youtube.com/channel/UCZUT79WUUpZlZ-XMF7l4CFg" target="_blank"><img id="YouTube" src="logos/youtube.png" alt="YouTube" width="78" height="17"></a>
+            </section>
+            <!-- Center Nav - Home & Tournaments buttons/links -->
+            <section class="nav-container">
+                <a href="index.html">Home</a>
+                <!-- Tournament Dropdown -->
+                <section class="dropdown">
+                    <button onclick="navDropdown()" class="navDropBtn">Tournaments <i id="navDropArrow" class="fas fa-caret-down"></i></button>
+                    <div id="tournamentDropdown" class="dropdown-content">
+                        <a href="#">Hidden Cup 1</a>
+                        <a href="#">Hidden Cup 2</a>
+                        <a href="#">Hidden Cup 3</a>
+                        <a href="#">Hidden Cup 4</a>
+                    </div>
+                </section>
+            </section>
+            <!-- Right Nav - Liquipedia & AoeZone? -->
+            <section class="nav-container">
+                <a href="https://liquipedia.net/ageofempires/Main_Page" target="_blank">Liquipedia</a>
+                <a href="https://www.aoezone.net/" target="_blank">AoeZone</a>
+            </section>
+        </nav>
+    </header>
+
+    <!-- Start of Main -->
+    <main>
+        <!-- Main Countdown -->
+        <section class="main-countdown">
+            <p>Hidden Cup 4 Main Event</p>
+            <div class="countdown-hc4"></div>
+        </section>
+    </main>
+
+    <!-- Start of Footer -->
+    <footer>
+        <section class="bottom-bar">
+            <section class="copyright-container">
+                <a href="https://www.twitch.tv/t90official" target="_blank"><img id="T90Official" src="logos/t90official.png" alt="T90Official" width="75" height="75"></a>
+                <h5>&copy;2021 T90Official. All rights reserved.</h5>
+                <h5>All <a href="#">trademarks</a> referenced herein are the properties of their respective owners.</h5>
+            </section>
+        </section>
+    </footer>
+</body>
+</html>
