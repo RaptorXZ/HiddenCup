@@ -11,6 +11,18 @@ const x = setInterval(function() {
     const minutes = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
+    if (days <= 9) {
+        days = "0" + days;
+    }
+
+    if (hours <= 9) {
+        hours = "0" + hours;
+    }
+
+    if (minutes <= 9) {
+        minutes = "0" + minutes;
+    }
+
     if (seconds <= 9) {
         seconds = "0" + seconds;
     }
