@@ -220,11 +220,11 @@ h2 {
 }
 
 /* Tournament Bracket */
-.bracket-hc4 *, .bracket-hc4 *::before, .bracket-hc4 *::after {
+.bracket-hc *, .bracket-hc *::before, .bracket-hc *::after {
     box-sizing: border-box;
 }
 
-.bracket-hc4 {
+.bracket-hc {
     display: none;
     width: 90%;
     min-width: 18em;
