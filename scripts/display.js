@@ -377,7 +377,7 @@ function toggleBracket(display) {
     if (display == "mainevent")
     {
         document.querySelector("#bracket-mainevent-button").classList.add("bracket-nav-active");
-    document.querySelector("#bracket-qualifiers-button").classList.remove("bracket-nav-active");
+        document.querySelector("#bracket-qualifiers-button").classList.remove("bracket-nav-active");
     }
     else if (display == "qualifiers")
     {
@@ -387,5 +387,10 @@ function toggleBracket(display) {
 }
 
 function toggleResults() {
-    
+    let matches = document.getElementsByClassName("spoiler-class");
+    Array.from(matches).forEach(execToggleResults);
+}
+
+function execToggleResults(item, index) {
+    item.classList.toggle("spoiler-filter");
 }
