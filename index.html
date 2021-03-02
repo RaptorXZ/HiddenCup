@@ -46,11 +46,11 @@
             <p class="countdown-header">Hidden Cup 4 Main Event</p>
             <p class="countdown-hc4"></p>
             <section class="about-container">
-                <h2 class="about-button" onclick="showAbout()">ABOUT HIDDEN CUP</h2>
-                <p class="about-hc hide-content">Hidden Cup (HC) is an Age of Empires 2: Definitive Edition 1v1 
-                    tournament hosted by T90Official. In the main event, the 16 
-                    participants play under hidden identities. The casters and audience
-                    do not know which player is which, and the competitors do not know
+                <h2 class="about-button" onclick='showAbout()'>ABOUT HIDDEN CUP</h2>
+                <p class="about-hc hide-content">Hidden Cup (HC) is an Age of Empires 2 1v1 
+                    tournament hosted by T90Official. In the main event, the 
+                    participants play under hidden identities. The casters and audience 
+                    do not know which player is which, and the competitors do not know 
                     who they are up against. After the grand finals, the players and 
                     the winner will be revealed.
                     <br>
@@ -62,6 +62,11 @@
         </section>
         <!-- Brackets -->
         <section class="bracket-hc">
+            <section class="bracket-nav">
+                <button class="bracket-nav-button" id="bracket-spoilers-button" onclick='toggleResults()'>Reveal Results</button>
+                <button class="bracket-nav-button bracket-nav-active" id="bracket-mainevent-button" onclick='toggleBracket("mainevent")'>Main Event</button>
+                <button class="bracket-nav-button" id="bracket-qualifiers-button" onclick='toggleBracket("qualifiers")'>Qualifiers</button>
+            </section>
             <h1 id="hidden-cup-title">Hidden Cup 4 Main Event</h1>
             <section class="bracket">
                 <section class="bracket-round">
@@ -382,7 +387,7 @@
                                             <th>Score</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="bracket-content">
+                                    <tbody class="bracket-content spoiler-filter">
                                         <!-- Player 1 -->
                                         <tr class="bracket-player">
                                             <td class="bracket-country">

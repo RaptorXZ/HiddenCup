@@ -1,6 +1,8 @@
 function showHC(cup) {
     document.querySelector(".bracket-hc").classList.add("show-bracket");
     document.querySelector(".main-countdown").classList.add("hide-content");
+    document.querySelector("#bracket-mainevent-button").classList.add("bracket-nav-active");
+    document.querySelector("#bracket-qualifiers-button").classList.remove("bracket-nav-active");
 
     if (cup == 1) {
         document.querySelector("#hidden-cup-title").innerHTML = "Hidden Cup 1 Main Event";
@@ -369,4 +371,21 @@ function showHC(cup) {
 
 function showAbout() {
     document.querySelector(".about-hc").classList.toggle("hide-content");
+}
+
+function toggleBracket(display) {
+    if (display == "mainevent")
+    {
+        document.querySelector("#bracket-mainevent-button").classList.add("bracket-nav-active");
+    document.querySelector("#bracket-qualifiers-button").classList.remove("bracket-nav-active");
+    }
+    else if (display == "qualifiers")
+    {
+        document.querySelector("#bracket-mainevent-button").classList.remove("bracket-nav-active");
+        document.querySelector("#bracket-qualifiers-button").classList.add("bracket-nav-active");
+    }
+}
+
+function toggleResults() {
+    
 }

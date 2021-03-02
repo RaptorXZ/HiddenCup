@@ -101,6 +101,9 @@ footer {
     border: none;
     cursor: pointer;
 }
+.navDropBtn:focus {
+    outline: none;
+}
 
 .navDropBtn:hover, .navDropBtn:focus {
     border: none;
@@ -222,6 +225,29 @@ h2 {
 /* Tournament Bracket */
 .bracket-hc *, .bracket-hc *::before, .bracket-hc *::after {
     box-sizing: border-box;
+}
+
+.bracket-nav {
+    display: flex;
+    flex-direction: row;
+}
+.bracket-nav * {
+    font-size: 1.1em;
+    background-color: transparent;
+    color: white;
+    padding: 0.2em 0.4em;
+    text-shadow: 0 0 10px #272797, 0 0 25px black;
+}
+.bracket-nav *:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px white;
+}
+.bracket-nav *:focus {
+    outline: none;
+}
+.bracket-nav-active {
+    border-bottom: 0;
+    text-shadow: 0 !important;
 }
 
 .bracket-hc {
@@ -416,6 +442,11 @@ h2 {
     font-size: 0.95rem;
     background-color: white;
     border-color: spin(shade(white, 10%), -10);
+}
+
+.spoiler-filter * {
+    color: transparent;
+    text-shadow: 0 0 10px black;
 }
 
 @media screen and (min-width: 1200px) {
