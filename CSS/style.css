@@ -450,7 +450,7 @@ h2 {
 }
 
 .spoiler-filter * {
-    filter: blur(5px);
+    filter: blur(5px) grayscale(100%);
 }
 
 #bracket-spoilers-button {

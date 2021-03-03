@@ -333,7 +333,7 @@ function execToggleResults(item, index) {
 function setPlayerNames(cup) {
     let players;
     if (cup == 'hc1') {
-        players = ['','Liereyy','Daut','Miguel','','TheViper','Nicov','TaToH',
+        players = ['','Liereyy','DauT','Miguel','','TheViper','Nicov','TaToH',
         '','MbL','Yo','RiuT','','Slam','F1Re','Vivi','Liereyy','Miguel','TheViper',
         'Nicov','MbL','RiuT','Slam','F1Re','Miguel','TheViper','MbL','Slam',
         'TheViper','MbL'];
