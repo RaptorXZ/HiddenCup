@@ -366,6 +366,7 @@ h2 {
     display: flex;
 }
 .bracket-content::after {
+    color: white;
     content: ':';
     width: 1em;
     text-align: center;
@@ -387,6 +388,10 @@ h2 {
     width: 50%;
     order: 2;
     text-align: left;
+}
+.bracket-content .bracket-player:last-child .bracket-country {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 .bracket-table {
@@ -445,12 +450,148 @@ h2 {
 }
 
 .spoiler-filter * {
-    color: transparent;
-    text-shadow: 0 0 40px rgb(255, 255, 255);
+    filter: blur(5px);
 }
 
 #bracket-spoilers-button {
     background-color: red;
+}
+
+.flag-icon {
+    position: relative;
+    display: inline-block;
+    width: 1.66em;
+    height: 1.33em;
+}
+.bracket-flag {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.flag-icon-ar {
+    background-image: url("../logos/Ar_hd.png");
+}
+.flag-icon-at {
+    background-image: url("../logos/At_hd.png");
+}
+.flag-icon-be {
+    background-image: url("../logos/Be_hd.png");
+}
+.flag-icon-br {
+    background-image: url("../logos/Br_hd.png");
+}
+.flag-icon-ca {
+    background-image: url("../logos/Ca_hd.png");
+}
+.flag-icon-cl {
+    background-image: url("../logos/Cl_hd.png");
+}
+.flag-icon-cn {
+    background-image: url("../logos/Cn_hd.png");
+}
+.flag-icon-cz {
+    background-image: url("../logos/Cz_hd.png");
+}
+.flag-icon-de {
+    background-image: url("../logos/De_hd.png");
+}
+.flag-icon-ee {
+    background-image: url("../logos/Ee_hd.png");
+}
+.flag-icon-es {
+    background-image: url("../logos/Es_hd.png");
+}
+.flag-icon-fi {
+    background-image: url("../logos/Fi_hd.png");
+}
+.flag-icon-fr {
+    background-image: url("../logos/Fr_hd.png");
+}
+.flag-icon-gb {
+    background-image: url("../logos/Gb_hd.png");
+}
+.flag-icon-hu {
+    background-image: url("../logos/Hu_hd.png");
+}
+.flag-icon-ie {
+    background-image: url("../logos/Ie_hd.png");
+}
+.flag-icon-il {
+    background-image: url("../logos/Il_hd.png");
+}
+.flag-icon-in {
+    background-image: url("../logos/In_hd.png");
+}
+.flag-icon-it {
+    background-image: url("../logos/It_hd.png");
+}
+.flag-icon-jp {
+    background-image: url("../logos/Jp_hd.png");
+}
+.flag-icon-nl {
+    background-image: url("../logos/Nl_hd.png");
+}
+.flag-icon-no {
+    background-image: url("../logos/No_hd.png");
+}
+.flag-icon-pe {
+    background-image: url("../logos/Pe_hd.png");
+}
+.flag-icon-pl {
+    background-image: url("../logos/Pl_hd.png");
+}
+.flag-icon-rs {
+    background-image: url("../logos/Rs_hd.png");
+}
+.flag-icon-ru {
+    background-image: url("../logos/Ru_hd.png");
+}
+.flag-icon-se {
+    background-image: url("../logos/Se_hd.png");
+}
+.flag-icon-tr {
+    background-image: url("../logos/Tr_hd.png");
+}
+.flag-icon-tw {
+    background-image: url("../logos/Tw_hd.png");
+}
+.flag-icon-ua {
+    background-image: url("../logos/Ua_hd.png");
+}
+.flag-icon-us {
+    background-image: url("../logos/Us_hd.png");
+}
+.flag-icon-vn {
+    background-image: url("../logos/Vn_hd.png");
+}
+.flag-icon-qm {
+    background-image: url("../logos/Qm_hd.png");
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    .bracket-content .bracket-player:last-child .bracket-country {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    .bracket-content .bracket-player:first-child {
+        flex-direction: column;
+    }
+    .bracket-content .bracket-player:last-child {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .bracket-content .bracket-player:last-child .bracket-country {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    .bracket-content .bracket-player:first-child {
+        flex-direction: column;
+    }
+    .bracket-content .bracket-player:last-child {
+        flex-direction: column-reverse;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -539,7 +680,14 @@ h2 {
         order: 1;
     }
     .bracket-content .bracket-player:last-child .bracket-country {
-        justify-content: flex-start;;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    .bracket-content .bracket-player:first-child {
+        flex-direction: column;
+    }
+    .bracket-content .bracket-player:last-child {
+        flex-direction: column-reverse;
     }
 }
 
@@ -637,5 +785,18 @@ h2 {
     .about-hc {
         margin-left: 14em;
         margin-right: 14em;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .bracket-content .bracket-player:last-child .bracket-country {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    .bracket-content .bracket-player:first-child {
+        flex-direction: row-reverse;
+    }
+    .bracket-content .bracket-player:last-child {
+        flex-direction: row-reverse;
     }
 }

@@ -24,10 +24,10 @@
                 <section class="dropdown">
                     <button onclick="navDropdown()" class="navDropBtn">Tournaments <i id="navDropArrow" class="fas fa-caret-down"></i></button>
                     <div id="tournamentDropdown" class="dropdown-content">
-                        <a href="#HC1" onclick="showHC(1)">Hidden Cup 1</a>
-                        <a href="#HC2" onclick="showHC(2)">Hidden Cup 2</a>
-                        <a href="#HC3" onclick="showHC(3)">Hidden Cup 3</a>
-                        <a href="#HC4" onclick="showHC(4)">Hidden Cup 4</a>
+                        <a href="#HC1" onclick="showHC('hc1')">Hidden Cup 1</a>
+                        <a href="#HC2" onclick="showHC('hc2')">Hidden Cup 2</a>
+                        <a href="#HC3" onclick="showHC('hc3')">Hidden Cup 3</a>
+                        <a href="#HC4" onclick="showHC('hc4')">Hidden Cup 4</a>
                     </div>
                 </section>
             </section>
@@ -77,7 +77,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-ro16-match1-time">18 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-ro16-match1-time">18 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -90,6 +90,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match1-player1">Cobra Car</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match1-score1">0</span>
@@ -99,6 +100,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match1-player2">Little John</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match1-score2">0</span>
@@ -114,7 +116,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-ro16-match2-time">18 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-ro16-match2-time">18 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -127,6 +129,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match2-player1">Warwolf</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match2-score1">0</span>
@@ -136,6 +139,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match2-player2">Edward Longshanks</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match2-score2">0</span>
@@ -151,7 +155,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-ro16-match3-time">18 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-ro16-match3-time">18 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -164,6 +168,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match3-player1">Pope Leo I</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match3-score1">0</span>
@@ -173,6 +178,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match3-player2">Sundjata</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match3-score2">0</span>
@@ -188,7 +194,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-ro16-match4-time">18 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-ro16-match4-time">18 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -201,6 +207,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match4-player1">Ivaylo</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match4-score1">0</span>
@@ -210,6 +217,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match4-player2">Philip the Good</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match4-score2">0</span>
@@ -225,7 +233,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-ro16-match5-time">18 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-ro16-match5-time">18 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -238,6 +246,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match5-player1">Admiral Yi Sun-Shin</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match5-score1">0</span>
@@ -247,6 +256,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match5-player2">King Bela IV</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match5-score2">0</span>
@@ -262,7 +272,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-ro16-match6-time">18 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-ro16-match6-time">18 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -275,6 +285,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match6-player1">John the Fearless</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match6-score1">0</span>
@@ -284,6 +295,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match6-player2">Jacqueline of Hainaut</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match6-score2">0</span>
@@ -299,7 +311,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-ro16-match7-time">18 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-ro16-match7-time">18 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -312,6 +324,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match7-player1">Le Loi</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match7-score1">0</span>
@@ -321,6 +334,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match7-player2">Harald Hardraade</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match7-score2">0</span>
@@ -336,7 +350,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-ro16-match8-time">18 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-ro16-match8-time">18 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -349,6 +363,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match8-player1">Master of the Templar</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match8-score1">0</span>
@@ -358,6 +373,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-ro16-match8-player2">Hidden Name</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score spoiler-class spoiler-filter">
                                                 <span class="bracket-number" id="main-ro16-match8-score2">0</span>
@@ -379,7 +395,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-qf-match1-time">19 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-qf-match1-time">19 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -387,11 +403,12 @@
                                             <th>Score</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="bracket-content spoiler-class spoiler-filter">
+                                    <tbody class="bracket-content spoiler-class spoiler-filter" onclick="this.classList.remove('spoiler-filter')">
                                         <!-- Player 1 -->
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-qf-match1-player1">Cobra Car</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-qf-match1-score1">0</span>
@@ -401,6 +418,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-qf-match1-player2">Warwolf</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-qf-match1-score2">0</span>
@@ -416,7 +434,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-qf-match2-time">19 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-qf-match2-time">19 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -429,6 +447,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-qf-match2-player1">Pope Leo I</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-qf-match2-score1">0</span>
@@ -438,6 +457,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-qf-match2-player2">Ivaylo</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-qf-match2-score2">0</span>
@@ -453,7 +473,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-qf-match3-time">19 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-qf-match3-time">19 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -466,6 +486,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-qf-match3-player1">Admiral Yi Sun-Shin</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-qf-match3-score1">0</span>
@@ -475,6 +496,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-qf-match3-player2">John the Fearless</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-qf-match3-score2">0</span>
@@ -490,7 +512,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-qf-match4-time">19 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-qf-match4-time">19 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -503,6 +525,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-qf-match4-player1">Le Loi</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-qf-match4-score1">0</span>
@@ -512,6 +535,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-qf-match4-player2">Master of the Templar</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-qf-match4-score2">0</span>
@@ -533,7 +557,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-sf-match1-time">20 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-sf-match1-time">20 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -546,6 +570,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-sf-match1-player1">Cobra Car</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-sf-match1-score1">0</span>
@@ -555,6 +580,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-sf-match1-player2">Pope Leo I</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-sf-match1-score2">0</span>
@@ -570,7 +596,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-sf-match2-time">20 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-sf-match2-time">20 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -583,6 +609,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-sf-match2-player1">Admiral Yi Sun-Shin</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-sf-match2-score1">0</span>
@@ -592,6 +619,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-sf-match2-player2">Le Loi</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-sf-match2-score2">0</span>
@@ -613,7 +641,7 @@
                             <div class="bracket-match">
                                 <table class="bracket-table">
                                     <caption class="bracket-caption">
-                                        <time datetime="2021-03-18" id="main-gf-match1-time">21 March 2021</time>
+                                        <time datetime="2021-03-18" class="bracket-date" id="main-gf-match1-time">21 March 2021</time>
                                     </caption>
                                     <thead class="bracket-head">
                                         <tr></tr>
@@ -626,6 +654,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-gf-match1-player1">Cobra Car</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-gf-match1-score1">0</span>
@@ -635,6 +664,7 @@
                                         <tr class="bracket-player">
                                             <td class="bracket-country">
                                                 <div class="bracket-name" id="main-gf-match1-player2">Admiral Yi Sun-Shin</div>
+                                                <span class="bracket-flag flag-icon flag-icon-qm" aria-label="Flag"></span>
                                             </td>
                                             <td class="bracket-score">
                                                 <span class="bracket-number" id="main-gf-match1-score2">0</span>

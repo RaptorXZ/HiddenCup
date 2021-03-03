@@ -4,79 +4,14 @@ function showHC(cup) {
     document.querySelector("#bracket-mainevent-button").classList.add("bracket-nav-active");
     document.querySelector("#bracket-qualifiers-button").classList.remove("bracket-nav-active");
 
-    if (cup == 1) {
+    if (cup == 'hc1') {
         document.querySelector("#hidden-cup-title").innerHTML = "Hidden Cup 1 Main Event";
         document.querySelector("#hidden-cup-round").innerHTML = "Round of 12 - Best of 5";
         document.querySelector("#hidden-cup-sf").innerHTML = "Semifinals - Best of 5";
-        /* Names */
-        document.querySelector("#main-ro16-match1-player1").innerHTML = "Daut";
-        document.querySelector("#main-ro16-match1-player2").innerHTML = "Miguel";
-        document.querySelector("#main-ro16-match2-player1").innerHTML = "Nicov";
-        document.querySelector("#main-ro16-match2-player2").innerHTML = "TaToH";
-        document.querySelector("#main-ro16-match3-player1").innerHTML = "Yo";
-        document.querySelector("#main-ro16-match3-player2").innerHTML = "RiuT";
-        document.querySelector("#main-ro16-match4-player1").innerHTML = "F1Re";
-        document.querySelector("#main-ro16-match4-player2").innerHTML = "Vivi";
-        document.querySelector("#main-qf-match1-player1").innerHTML = "Liereyy";
-        document.querySelector("#main-qf-match1-player2").innerHTML = "Miguel";
-        document.querySelector("#main-qf-match2-player1").innerHTML = "TheViper";
-        document.querySelector("#main-qf-match2-player2").innerHTML = "Nicov";
-        document.querySelector("#main-qf-match3-player1").innerHTML = "MbL";
-        document.querySelector("#main-qf-match3-player2").innerHTML = "RiuT";
-        document.querySelector("#main-qf-match4-player1").innerHTML = "Slam";
-        document.querySelector("#main-qf-match4-player2").innerHTML = "F1Re";
-        document.querySelector("#main-sf-match1-player1").innerHTML = "Miguel";
-        document.querySelector("#main-sf-match1-player2").innerHTML = "TheViper";
-        document.querySelector("#main-sf-match2-player1").innerHTML = "MbL";
-        document.querySelector("#main-sf-match2-player2").innerHTML = "Slam";
-        document.querySelector("#main-gf-match1-player1").innerHTML = "TheViper";
-        document.querySelector("#main-gf-match1-player2").innerHTML = "MbL";
-        /* Scores */
-        document.querySelector("#main-ro16-match1-score1").innerHTML = "1";
-        document.querySelector("#main-ro16-match1-score2").innerHTML = "3";
-        document.querySelector("#main-ro16-match2-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match2-score2").innerHTML = "1";
-        document.querySelector("#main-ro16-match3-score1").innerHTML = "2";
-        document.querySelector("#main-ro16-match3-score2").innerHTML = "3";
-        document.querySelector("#main-ro16-match4-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match4-score2").innerHTML = "1";
-        document.querySelector("#main-qf-match1-score1").innerHTML = "2";
-        document.querySelector("#main-qf-match1-score2").innerHTML = "3";
-        document.querySelector("#main-qf-match2-score1").innerHTML = "3";
-        document.querySelector("#main-qf-match2-score2").innerHTML = "0";
-        document.querySelector("#main-qf-match3-score1").innerHTML = "3";
-        document.querySelector("#main-qf-match3-score2").innerHTML = "2";
-        document.querySelector("#main-qf-match4-score1").innerHTML = "3";
-        document.querySelector("#main-qf-match4-score2").innerHTML = "1";
-        document.querySelector("#main-sf-match1-score1").innerHTML = "0";
-        document.querySelector("#main-sf-match1-score2").innerHTML = "3";
-        document.querySelector("#main-sf-match2-score1").innerHTML = "3";
-        document.querySelector("#main-sf-match2-score2").innerHTML = "1";
-        document.querySelector("#main-gf-match1-score1").innerHTML = "4";
-        document.querySelector("#main-gf-match1-score2").innerHTML = "2";
-        /* Dates */
-        document.querySelector("#main-ro16-match1-time").setAttribute("datetime", "2018-09-28");
-        document.querySelector("#main-ro16-match1-time").innerHTML = "28 September 2018";
-        document.querySelector("#main-ro16-match2-time").setAttribute("datetime", "2018-09-28");
-        document.querySelector("#main-ro16-match2-time").innerHTML = "28 September 2018";
-        document.querySelector("#main-ro16-match3-time").setAttribute("datetime", "2018-09-28");
-        document.querySelector("#main-ro16-match3-time").innerHTML = "28 September 2018";
-        document.querySelector("#main-ro16-match4-time").setAttribute("datetime", "2018-09-29");
-        document.querySelector("#main-ro16-match4-time").innerHTML = "29 September 2018";
-        document.querySelector("#main-qf-match1-time").setAttribute("datetime", "2018-09-29");
-        document.querySelector("#main-qf-match1-time").innerHTML = "29 September 2018";
-        document.querySelector("#main-qf-match2-time").setAttribute("datetime", "2018-09-29");
-        document.querySelector("#main-qf-match2-time").innerHTML = "29 September 2018";
-        document.querySelector("#main-qf-match3-time").setAttribute("datetime", "2018-09-29");
-        document.querySelector("#main-qf-match3-time").innerHTML = "29 September 2018";
-        document.querySelector("#main-qf-match4-time").setAttribute("datetime", "2018-09-30");
-        document.querySelector("#main-qf-match4-time").innerHTML = "30 September 2018";
-        document.querySelector("#main-sf-match1-time").setAttribute("datetime", "2018-09-30");
-        document.querySelector("#main-sf-match1-time").innerHTML = "30 September 2018";
-        document.querySelector("#main-sf-match2-time").setAttribute("datetime", "2018-09-30");
-        document.querySelector("#main-sf-match2-time").innerHTML = "1 October 2018";
-        document.querySelector("#main-gf-match1-time").setAttribute("datetime", "2018-09-30");
-        document.querySelector("#main-gf-match1-time").innerHTML = "1 October 2018";
+        setPlayerNames('hc1');
+        setPlayerScores('hc1');
+        setMatchDates('hc1');
+        setPlayerFlags('hc1');
     }
     else if (cup == 2) {
         document.querySelector("#hidden-cup-title").innerHTML = "Hidden Cup 2 Main Event";
@@ -393,4 +328,78 @@ function toggleResults() {
 
 function execToggleResults(item, index) {
     item.classList.toggle("spoiler-filter");
+}
+
+function setPlayerNames(cup) {
+    let players;
+    if (cup == 'hc1') {
+        players = ['','Liereyy','Daut','Miguel','','TheViper','Nicov','TaToH',
+        '','MbL','Yo','RiuT','','Slam','F1Re','Vivi','Liereyy','Miguel','TheViper',
+        'Nicov','MbL','RiuT','Slam','F1Re','Miguel','TheViper','MbL','Slam',
+        'TheViper','MbL'];
+    }
+
+    const a = document.getElementsByClassName("bracket-name");
+    const names = Array.from(a);
+    for (let i = 0; i < players.length; i++) {
+        names[i].innerHTML = players[i];
+    }
+}
+
+function setPlayerScores(cup) {
+    let scores;
+    if (cup == 'hc1') {
+        scores = ['N/A','N/A','1','3','N/A','N/A','3','1','N/A','N/A','2',
+        '3','N/A','N/A','3','1','2','3','3','0','3','2','3','1','0','3','3','1',
+        '4','2']; 
+    }
+
+    const a = document.getElementsByClassName("bracket-number");
+    const score = Array.from(a);
+    for (let i = 0; i < scores.length; i++) {
+        score[i].innerHTML = scores[i];
+    }
+}
+
+function setMatchDates(cup) {
+    let dates;
+    let datetimes;
+    if (cup == 'hc1') {
+        dates = ['N/A','28 September 2018','N/A','28 September 2018','N/A',
+        '28 September 2018','N/A','29 September 2018','29 September 2018',
+        '29 September 2018','29 September 2018','30 September 2018','30 September 2018',
+        '30 September 2018','1 October 2018'];
+
+        datetimes = ['N/A','2018-09-28','N/A','2018-09-28','N/A','2018-09-28',
+        'N/A','2018-09-29','2018-09-29','2018-09-29','2018-09-29','2018-09-30',
+        '2018-09-30','2018-09-30','2018-10-01'];
+    }
+
+    const a = document.getElementsByClassName("bracket-date");
+    const date = Array.from(a);
+    for (let i = 0; i < dates.length; i++) {
+        date[i].innerHTML = dates[i];
+        date[i].setAttribute("datetime", datetimes[i]);
+    }
+}
+
+function setPlayerFlags(cup) {
+    let flags;
+    if (cup == 'hc1') {
+        flags = ['hide-content','flag-icon-at','flag-icon-rs','flag-icon-br',
+        'hide-content','flag-icon-no','flag-icon-ar','flag-icon-es',
+        'hide-content','flag-icon-no','flag-icon-cn','flag-icon-br',
+        'hide-content','flag-icon-ca','flag-icon-br','flag-icon-cn',
+        'flag-icon-at','flag-icon-br','flag-icon-no','flag-icon-ar',
+        'flag-icon-no','flag-icon-br','flag-icon-ca','flag-icon-br',
+        'flag-icon-br','flag-icon-no','flag-icon-no','flag-icon-ca',
+        'flag-icon-no','flag-icon-no'];
+    }
+
+    const a = document.getElementsByClassName("bracket-flag");
+    const flag = Array.from(a);
+    for (let i = 0; i < flags.length; i++) {
+        flag[i].classList.remove("flag-icon-qm");
+        flag[i].classList.add(flags[i]);
+    }
 }
