@@ -13,263 +13,23 @@ function showHC(cup) {
         setMatchDates('hc1');
         setPlayerFlags('hc1');
     }
-    else if (cup == 2) {
+    else if (cup == 'hc2') {
         document.querySelector("#hidden-cup-title").innerHTML = "Hidden Cup 2 Main Event";
         document.querySelector("#hidden-cup-sf").innerHTML = "Semifinals - Best of 5";
-        /* Names */
-        document.querySelector("#main-ro16-match1-player1").innerHTML = "Mr_Yo";
-        document.querySelector("#main-ro16-match1-player2").innerHTML = "TaToH";
-        document.querySelector("#main-ro16-match2-player1").innerHTML = "TheMax";
-        document.querySelector("#main-ro16-match2-player2").innerHTML = "JorDan_23";
-        document.querySelector("#main-ro16-match3-player1").innerHTML = "dogao";
-        document.querySelector("#main-ro16-match3-player2").innerHTML = "Villese";
-        document.querySelector("#main-ro16-match4-player1").innerHTML = "ACCM";
-        document.querySelector("#main-ro16-match4-player2").innerHTML = "Liereyy";
-        document.querySelector("#main-ro16-match5-player1").innerHTML = "MbL";
-        document.querySelector("#main-ro16-match5-player2").innerHTML = "Daut";
-        document.querySelector("#main-ro16-match6-player1").innerHTML = "BacT";
-        document.querySelector("#main-ro16-match6-player2").innerHTML = "Tim";
-        document.querySelector("#main-ro16-match7-player1").innerHTML = "TheViper";
-        document.querySelector("#main-ro16-match7-player2").innerHTML = "Nicov";
-        document.querySelector("#main-ro16-match8-player1").innerHTML = "Vivi";
-        document.querySelector("#main-ro16-match8-player2").innerHTML = "Hera";
-        document.querySelector("#main-qf-match1-player1").innerHTML = "Mr_Yo";
-        document.querySelector("#main-qf-match1-player2").innerHTML = "TheMax";
-        document.querySelector("#main-qf-match2-player1").innerHTML = "dogao";
-        document.querySelector("#main-qf-match2-player2").innerHTML = "Liereyy";
-        document.querySelector("#main-qf-match3-player1").innerHTML = "MbL";
-        document.querySelector("#main-qf-match3-player2").innerHTML = "Tim";
-        document.querySelector("#main-qf-match4-player1").innerHTML = "TheViper";
-        document.querySelector("#main-qf-match4-player2").innerHTML = "Vivi";
-        document.querySelector("#main-sf-match1-player1").innerHTML = "TheMax";
-        document.querySelector("#main-sf-match1-player2").innerHTML = "Tim";
-        document.querySelector("#main-sf-match2-player1").innerHTML = "MbL";
-        document.querySelector("#main-sf-match2-player2").innerHTML = "TheViper";
-        document.querySelector("#main-gf-match1-player1").innerHTML = "TheMax";
-        document.querySelector("#main-gf-match1-player2").innerHTML = "TheViper";
-        /* Scores */
-        document.querySelector("#main-ro16-match1-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match1-score2").innerHTML = "2";
-        document.querySelector("#main-ro16-match2-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match2-score2").innerHTML = "0";
-        document.querySelector("#main-ro16-match3-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match3-score2").innerHTML = "1";
-        document.querySelector("#main-ro16-match4-score1").innerHTML = "0";
-        document.querySelector("#main-ro16-match4-score2").innerHTML = "3";
-        document.querySelector("#main-ro16-match5-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match5-score2").innerHTML = "1";
-        document.querySelector("#main-ro16-match6-score1").innerHTML = "1";
-        document.querySelector("#main-ro16-match6-score2").innerHTML = "3";
-        document.querySelector("#main-ro16-match7-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match7-score2").innerHTML = "0";
-        document.querySelector("#main-ro16-match8-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match8-score2").innerHTML = "1";
-        document.querySelector("#main-qf-match1-score1").innerHTML = "1";
-        document.querySelector("#main-qf-match1-score2").innerHTML = "3";
-        document.querySelector("#main-qf-match2-score1").innerHTML = "2";
-        document.querySelector("#main-qf-match2-score2").innerHTML = "3";
-        document.querySelector("#main-qf-match3-score1").innerHTML = "3";
-        document.querySelector("#main-qf-match3-score2").innerHTML = "0";
-        document.querySelector("#main-qf-match4-score1").innerHTML = "3";
-        document.querySelector("#main-qf-match4-score2").innerHTML = "0";
-        document.querySelector("#main-sf-match1-score1").innerHTML = "3";
-        document.querySelector("#main-sf-match1-score2").innerHTML = "1";
-        document.querySelector("#main-sf-match2-score1").innerHTML = "1";
-        document.querySelector("#main-sf-match2-score2").innerHTML = "3";
-        document.querySelector("#main-gf-match1-score1").innerHTML = "3";
-        document.querySelector("#main-gf-match1-score2").innerHTML = "4";
-        /* Dates */
-        document.querySelector("#main-ro16-match1-time").setAttribute("datetime", "2019-04-11");
-        document.querySelector("#main-ro16-match1-time").innerHTML = "11 April 2019";
-        document.querySelector("#main-ro16-match2-time").setAttribute("datetime", "2019-04-11");
-        document.querySelector("#main-ro16-match2-time").innerHTML = "11 April 2019";
-        document.querySelector("#main-ro16-match3-time").setAttribute("datetime", "2019-04-11");
-        document.querySelector("#main-ro16-match3-time").innerHTML = "11 April 2019";
-        document.querySelector("#main-ro16-match4-time").setAttribute("datetime", "2019-04-12");
-        document.querySelector("#main-ro16-match4-time").innerHTML = "12 April 2019";
-        document.querySelector("#main-ro16-match5-time").setAttribute("datetime", "2019-04-12");
-        document.querySelector("#main-ro16-match5-time").innerHTML = "12 April 2019";
-        document.querySelector("#main-ro16-match6-time").setAttribute("datetime", "2019-04-12");
-        document.querySelector("#main-ro16-match6-time").innerHTML = "12 April 2019";
-        document.querySelector("#main-ro16-match7-time").setAttribute("datetime", "2019-04-12");
-        document.querySelector("#main-ro16-match7-time").innerHTML = "12 April 2019";
-        document.querySelector("#main-ro16-match8-time").setAttribute("datetime", "2019-04-13");
-        document.querySelector("#main-ro16-match8-time").innerHTML = "13 April 2019";
-        document.querySelector("#main-qf-match1-time").setAttribute("datetime", "2019-04-13");
-        document.querySelector("#main-qf-match1-time").innerHTML = "13 April 2019";
-        document.querySelector("#main-qf-match2-time").setAttribute("datetime", "2019-04-13");
-        document.querySelector("#main-qf-match2-time").innerHTML = "13 April 2019";
-        document.querySelector("#main-qf-match3-time").setAttribute("datetime", "2019-04-13");
-        document.querySelector("#main-qf-match3-time").innerHTML = "13 April 2019";
-        document.querySelector("#main-qf-match4-time").setAttribute("datetime", "2019-04-14");
-        document.querySelector("#main-qf-match4-time").innerHTML = "14 April 2019";
-        document.querySelector("#main-sf-match1-time").setAttribute("datetime", "2019-04-14");
-        document.querySelector("#main-sf-match1-time").innerHTML = "14 April 2019";
-        document.querySelector("#main-sf-match2-time").setAttribute("datetime", "2019-04-14");
-        document.querySelector("#main-sf-match2-time").innerHTML = "14 April 2019";
-        document.querySelector("#main-gf-match1-time").setAttribute("datetime", "2019-05-01");
-        document.querySelector("#main-gf-match1-time").innerHTML = "1 October 2019";
+        setPlayerNames('hc2');
+        setPlayerScores('hc2');
+        setMatchDates('hc2');
+        setPlayerFlags('hc2');
     }
-    else if (cup == 3) {
+    else if (cup == 'hc3') {
         document.querySelector("#hidden-cup-title").innerHTML = "Hidden Cup 3 Main Event";
-        /* Names */
-        document.querySelector("#main-ro16-match1-player1").innerHTML = "Vivi";
-        document.querySelector("#main-ro16-match1-player2").innerHTML = "Liereyy";
-        document.querySelector("#main-ro16-match2-player1").innerHTML = "TaToh";
-        document.querySelector("#main-ro16-match2-player2").innerHTML = "Nicov";
-        document.querySelector("#main-ro16-match3-player1").innerHTML = "F1Re";
-        document.querySelector("#main-ro16-match3-player2").innerHTML = "DauT";
-        document.querySelector("#main-ro16-match4-player1").innerHTML = "Hera";
-        document.querySelector("#main-ro16-match4-player2").innerHTML = "LaaaaaN";
-        document.querySelector("#main-ro16-match5-player1").innerHTML = "TheViper";
-        document.querySelector("#main-ro16-match5-player2").innerHTML = "ACCM";
-        document.querySelector("#main-ro16-match6-player1").innerHTML = "Mr_Yo";
-        document.querySelector("#main-ro16-match6-player2").innerHTML = "Villese";
-        document.querySelector("#main-ro16-match7-player1").innerHTML = "MbL";
-        document.querySelector("#main-ro16-match7-player2").innerHTML = "BacT";
-        document.querySelector("#main-ro16-match8-player1").innerHTML = "dogao";
-        document.querySelector("#main-ro16-match8-player2").innerHTML = "TheMax";
-        document.querySelector("#main-qf-match1-player1").innerHTML = "Liereyy";
-        document.querySelector("#main-qf-match1-player2").innerHTML = "TaToH";
-        document.querySelector("#main-qf-match2-player1").innerHTML = "DauT";
-        document.querySelector("#main-qf-match2-player2").innerHTML = "Hera";
-        document.querySelector("#main-qf-match3-player1").innerHTML = "TheViper";
-        document.querySelector("#main-qf-match3-player2").innerHTML = "Mr_Yo";
-        document.querySelector("#main-qf-match4-player1").innerHTML = "MbL";
-        document.querySelector("#main-qf-match4-player2").innerHTML = "dogao";
-        document.querySelector("#main-sf-match1-player1").innerHTML = "TaToH";
-        document.querySelector("#main-sf-match1-player2").innerHTML = "Hera";
-        document.querySelector("#main-sf-match2-player1").innerHTML = "TheViper";
-        document.querySelector("#main-sf-match2-player2").innerHTML = "dogao";
-        document.querySelector("#main-gf-match1-player1").innerHTML = "Hera";
-        document.querySelector("#main-gf-match1-player2").innerHTML = "TheViper";
-        /* Scores */
-        document.querySelector("#main-ro16-match1-score1").innerHTML = "0";
-        document.querySelector("#main-ro16-match1-score2").innerHTML = "3";
-        document.querySelector("#main-ro16-match2-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match2-score2").innerHTML = "1";
-        document.querySelector("#main-ro16-match3-score1").innerHTML = "1";
-        document.querySelector("#main-ro16-match3-score2").innerHTML = "3";
-        document.querySelector("#main-ro16-match4-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match4-score2").innerHTML = "1";
-        document.querySelector("#main-ro16-match5-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match5-score2").innerHTML = "0";
-        document.querySelector("#main-ro16-match6-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match6-score2").innerHTML = "2";
-        document.querySelector("#main-ro16-match7-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match7-score2").innerHTML = "0";
-        document.querySelector("#main-ro16-match8-score1").innerHTML = "3";
-        document.querySelector("#main-ro16-match8-score2").innerHTML = "0";
-        document.querySelector("#main-qf-match1-score1").innerHTML = "2";
-        document.querySelector("#main-qf-match1-score2").innerHTML = "3";
-        document.querySelector("#main-qf-match2-score1").innerHTML = "2";
-        document.querySelector("#main-qf-match2-score2").innerHTML = "3";
-        document.querySelector("#main-qf-match3-score1").innerHTML = "3";
-        document.querySelector("#main-qf-match3-score2").innerHTML = "1";
-        document.querySelector("#main-qf-match4-score1").innerHTML = "2";
-        document.querySelector("#main-qf-match4-score2").innerHTML = "3";
-        document.querySelector("#main-sf-match1-score1").innerHTML = "1";
-        document.querySelector("#main-sf-match1-score2").innerHTML = "4";
-        document.querySelector("#main-sf-match2-score1").innerHTML = "4";
-        document.querySelector("#main-sf-match2-score2").innerHTML = "1";
-        document.querySelector("#main-gf-match1-score1").innerHTML = "0";
-        document.querySelector("#main-gf-match1-score2").innerHTML = "4";
-        /* Dates */
-        document.querySelector("#main-ro16-match1-time").setAttribute("datetime", "2020-03-19");
-        document.querySelector("#main-ro16-match1-time").innerHTML = "19 March 2020";
-        document.querySelector("#main-ro16-match2-time").setAttribute("datetime", "2020-03-19");
-        document.querySelector("#main-ro16-match2-time").innerHTML = "19 March 2020";
-        document.querySelector("#main-ro16-match3-time").setAttribute("datetime", "2020-03-19");
-        document.querySelector("#main-ro16-match3-time").innerHTML = "19 March 2020";
-        document.querySelector("#main-ro16-match4-time").setAttribute("datetime", "2020-03-19");
-        document.querySelector("#main-ro16-match4-time").innerHTML = "19 March 2020";
-        document.querySelector("#main-ro16-match5-time").setAttribute("datetime", "2020-03-20");
-        document.querySelector("#main-ro16-match5-time").innerHTML = "20 March 2020";
-        document.querySelector("#main-ro16-match6-time").setAttribute("datetime", "2020-03-20");
-        document.querySelector("#main-ro16-match6-time").innerHTML = "20 March 2020";
-        document.querySelector("#main-ro16-match7-time").setAttribute("datetime", "2020-03-20");
-        document.querySelector("#main-ro16-match7-time").innerHTML = "20 March 2020";
-        document.querySelector("#main-ro16-match8-time").setAttribute("datetime", "2020-03-20");
-        document.querySelector("#main-ro16-match8-time").innerHTML = "20 March 2020";
-        document.querySelector("#main-qf-match1-time").setAttribute("datetime", "2020-03-21");
-        document.querySelector("#main-qf-match1-time").innerHTML = "21 March 2020";
-        document.querySelector("#main-qf-match2-time").setAttribute("datetime", "2020-03-21");
-        document.querySelector("#main-qf-match2-time").innerHTML = "21 March 2020";
-        document.querySelector("#main-qf-match3-time").setAttribute("datetime", "2020-03-21");
-        document.querySelector("#main-qf-match3-time").innerHTML = "21 March 2020";
-        document.querySelector("#main-qf-match4-time").setAttribute("datetime", "2020-03-21");
-        document.querySelector("#main-qf-match4-time").innerHTML = "21 March 2020";
-        document.querySelector("#main-sf-match1-time").setAttribute("datetime", "2020-03-22");
-        document.querySelector("#main-sf-match1-time").innerHTML = "22 March 2020";
-        document.querySelector("#main-sf-match2-time").setAttribute("datetime", "2020-03-22");
-        document.querySelector("#main-sf-match2-time").innerHTML = "22 March 2020";
-        document.querySelector("#main-gf-match1-time").setAttribute("datetime", "2020-03-22");
-        document.querySelector("#main-gf-match1-time").innerHTML = "22 March 2020";
+        setPlayerNames('hc3');
+        setPlayerScores('hc3');
+        setMatchDates('hc3');
+        setPlayerFlags('hc3');
     }
-    else if (cup == 4) {
+    else if (cup == 'hc4') {
         document.querySelector("#hidden-cup-title").innerHTML = "Hidden Cup 4 Main Event";
-        /* Names */
-        document.querySelector("#main-ro16-match1-player1").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match1-player2").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match2-player1").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match2-player2").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match3-player1").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match3-player2").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match4-player1").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match4-player2").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match5-player1").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match5-player2").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match6-player1").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match6-player2").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match7-player1").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match7-player2").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match8-player1").innerHTML = "TBD";
-        document.querySelector("#main-ro16-match8-player2").innerHTML = "TBD";
-        document.querySelector("#main-qf-match1-player1").innerHTML = "TBD";
-        document.querySelector("#main-qf-match1-player2").innerHTML = "TBD";
-        document.querySelector("#main-qf-match2-player1").innerHTML = "TBD";
-        document.querySelector("#main-qf-match2-player2").innerHTML = "TBD";
-        document.querySelector("#main-qf-match3-player1").innerHTML = "TBD";
-        document.querySelector("#main-qf-match3-player2").innerHTML = "TBD";
-        document.querySelector("#main-qf-match4-player1").innerHTML = "TBD";
-        document.querySelector("#main-qf-match4-player2").innerHTML = "TBD";
-        document.querySelector("#main-sf-match1-player1").innerHTML = "TBD";
-        document.querySelector("#main-sf-match1-player2").innerHTML = "TBD";
-        document.querySelector("#main-sf-match2-player1").innerHTML = "TBD";
-        document.querySelector("#main-sf-match2-player2").innerHTML = "TBD";
-        document.querySelector("#main-gf-match1-player1").innerHTML = "TBD";
-        document.querySelector("#main-gf-match1-player2").innerHTML = "TBD";
-        /* Scores */
-        document.querySelector("#main-ro16-match1-score1").innerHTML = "0";
-        document.querySelector("#main-ro16-match1-score2").innerHTML = "0";
-        document.querySelector("#main-ro16-match2-score1").innerHTML = "0";
-        document.querySelector("#main-ro16-match2-score2").innerHTML = "0";
-        document.querySelector("#main-ro16-match3-score1").innerHTML = "0";
-        document.querySelector("#main-ro16-match3-score2").innerHTML = "0";
-        document.querySelector("#main-ro16-match4-score1").innerHTML = "0";
-        document.querySelector("#main-ro16-match4-score2").innerHTML = "0";
-        document.querySelector("#main-ro16-match5-score1").innerHTML = "0";
-        document.querySelector("#main-ro16-match5-score2").innerHTML = "0";
-        document.querySelector("#main-ro16-match6-score1").innerHTML = "0";
-        document.querySelector("#main-ro16-match6-score2").innerHTML = "0";
-        document.querySelector("#main-ro16-match7-score1").innerHTML = "0";
-        document.querySelector("#main-ro16-match7-score2").innerHTML = "0";
-        document.querySelector("#main-ro16-match8-score1").innerHTML = "0";
-        document.querySelector("#main-ro16-match8-score2").innerHTML = "0";
-        document.querySelector("#main-qf-match1-score1").innerHTML = "0";
-        document.querySelector("#main-qf-match1-score2").innerHTML = "0";
-        document.querySelector("#main-qf-match2-score1").innerHTML = "0";
-        document.querySelector("#main-qf-match2-score2").innerHTML = "0";
-        document.querySelector("#main-qf-match3-score1").innerHTML = "0";
-        document.querySelector("#main-qf-match3-score2").innerHTML = "0";
-        document.querySelector("#main-qf-match4-score1").innerHTML = "0";
-        document.querySelector("#main-qf-match4-score2").innerHTML = "0";
-        document.querySelector("#main-sf-match1-score1").innerHTML = "0";
-        document.querySelector("#main-sf-match1-score2").innerHTML = "0";
-        document.querySelector("#main-sf-match2-score1").innerHTML = "0";
-        document.querySelector("#main-sf-match2-score2").innerHTML = "0";
-        document.querySelector("#main-gf-match1-score1").innerHTML = "0";
-        document.querySelector("#main-gf-match1-score2").innerHTML = "0";
         /* Dates */
         document.querySelector("#main-ro16-match1-time").setAttribute("datetime", "2021-03-18");
         document.querySelector("#main-ro16-match1-time").innerHTML = "18 March 2021";
@@ -338,6 +98,18 @@ function setPlayerNames(cup) {
         'Nicov','MbL','RiuT','Slam','F1Re','Miguel','TheViper','MbL','Slam',
         'TheViper','MbL'];
     }
+    else if (cup == 'hc2') {
+        players = ['Mr_Yo','TaToH','TheMax','JorDan_23','dogao','Villese','ACCM',
+        'Liereyy','MbL','DauT','BacT','Tim','TheViper','Nicov','Vivi','Hera',
+        'Mr_Yo','TheMax','dogao','Liereyy','MbL','Tim','TheViper','Vivi','TheMax',
+        'Tim','MbL','TheViper','TheMax','TheViper']
+    }
+    else if (cup == 'hc3') {
+        players = ['Vivi','Liereyy','TaToh','Nicov','F1Re','DauT','Hera','LaaaaaN',
+        'TheViper','ACCM','Mr_Yo','Villese','MbL','BacT','dogao','TheMax','Liereyy',
+        'TaToH','DauT','Hera','TheViper','Mr_Yo','MbL','dogao','TaToH','Hera',
+        'TheViper','dogao','Hera','TheViper'];
+    }
 
     const a = document.getElementsByClassName("bracket-name");
     const names = Array.from(a);
@@ -352,6 +124,14 @@ function setPlayerScores(cup) {
         scores = ['N/A','N/A','1','3','N/A','N/A','3','1','N/A','N/A','2',
         '3','N/A','N/A','3','1','2','3','3','0','3','2','3','1','0','3','3','1',
         '4','2']; 
+    }
+    else if (cup == 'hc2') {
+        scores = ['3','2','3','0','3','1','0','3','3','1','1','3','3','0','3',
+        '1','1','3','2','3','3','0','3','0','3','1','1','3','3','4'];
+    }
+    else if (cup == 'hc3') {
+        scores = ['0','3','3','1','1','3','3','1','3','0','3','2','3','0','3',
+        '0','2','3','2','3','3','1','2','3','1','4','4','1','0','4'];
     }
 
     const a = document.getElementsByClassName("bracket-number");
@@ -374,6 +154,28 @@ function setMatchDates(cup) {
         'N/A','2018-09-29','2018-09-29','2018-09-29','2018-09-29','2018-09-30',
         '2018-09-30','2018-09-30','2018-10-01'];
     }
+    if (cup == 'hc2') {
+        dates = ['11 April 2019','11 April 2019','11 April 2019','12 April 2019',
+        '12 April 2019','12 April 2019','12 April 2019','13 April 2019',
+        '13 April 2019','13 April 2019','13 April 2019','14 April 2019',
+        '14 April 2019','14 April 2019','14 April 2019'];
+
+        datetimes = ['2019-04-11','2019-04-11','2019-04-11','2019-04-12',
+        '2019-04-12','2019-04-12','2019-04-12','2019-04-13','2019-04-13',
+        '2019-04-13','2019-04-13','2019-04-14','2019-04-14','2019-04-14',
+        '2019-04-14'];
+    }
+    if (cup == 'hc3') {
+        dates = ['19 March 2020','19 March 2020','19 March 2020','19 March 2020',
+        '20 March 2020','20 March 2020','20 March 2020','20 March 2020',
+        '21 March 2020','21 March 2020','21 March 2020','21 March 2020',
+        '22 March 2020','22 March 2020','22 March 2020'];
+
+        datetimes = ['2020-03-19','2020-03-19','2020-03-19','2020-03-19',
+        '2020-03-20','2020-03-20','2020-03-20','2020-03-20','2020-03-21',
+        '2020-03-21','2020-03-21','2020-03-21','2020-03-22','2020-03-22',
+        '2020-03-22'];
+    }
 
     const a = document.getElementsByClassName("bracket-date");
     const date = Array.from(a);
@@ -395,11 +197,64 @@ function setPlayerFlags(cup) {
         'flag-icon-br','flag-icon-no','flag-icon-no','flag-icon-ca',
         'flag-icon-no','flag-icon-no'];
     }
+    else if (cup == 'hc2') {
+        flags = ['flag-icon-cn','flag-icon-es','flag-icon-fi','flag-icon-de',
+        'flag-icon-br','flag-icon-fi','flag-icon-vn','flag-icon-at',
+        'flag-icon-no','flag-icon-rs','flag-icon-vn','flag-icon-cn',
+        'flag-icon-no','flag-icon-ar','flag-icon-cn','flag-icon-ca',
+        'flag-icon-cn','flag-icon-fi','flag-icon-br','flag-icon-at',
+        'flag-icon-no','flag-icon-cn','flag-icon-no','flag-icon-cn',
+        'flag-icon-fi','flag-icon-cn','flag-icon-no','flag-icon-no',
+        'flag-icon-fi','flag-icon-no'];
+    }
+    else if (cup == 'hc3') {
+        flags = ['flag-icon-cn','flag-icon-at','flag-icon-es','flag-icon-ar',
+        'flag-icon-br','flag-icon-rs','flag-icon-ca','flag-icon-es',
+        'flag-icon-no','flag-icon-vn','flag-icon-cn','flag-icon-fi',
+        'flag-icon-no','flag-icon-vn','flag-icon-br','flag-icon-fi',
+        'flag-icon-at','flag-icon-es','flag-icon-rs','flag-icon-ca',
+        'flag-icon-no','flag-icon-cn','flag-icon-no','flag-icon-br',
+        'flag-icon-es','flag-icon-ca','flag-icon-no','flag-icon-br',
+        'flag-icon-ca','flag-icon-no'];
+    }
 
     const a = document.getElementsByClassName("bracket-flag");
     const flag = Array.from(a);
     for (let i = 0; i < flags.length; i++) {
+        flag[i].classList.remove("flag-icon-ar");
+        flag[i].classList.remove("flag-icon-at");
+        flag[i].classList.remove("flag-icon-be");
+        flag[i].classList.remove("flag-icon-br");
+        flag[i].classList.remove("flag-icon-ca");
+        flag[i].classList.remove("flag-icon-cl");
+        flag[i].classList.remove("flag-icon-cn");
+        flag[i].classList.remove("flag-icon-cz");
+        flag[i].classList.remove("flag-icon-de");
+        flag[i].classList.remove("flag-icon-ee");
+        flag[i].classList.remove("flag-icon-es");
+        flag[i].classList.remove("flag-icon-fi");
+        flag[i].classList.remove("flag-icon-fr");
+        flag[i].classList.remove("flag-icon-gb");
+        flag[i].classList.remove("flag-icon-hu");
+        flag[i].classList.remove("flag-icon-ie");
+        flag[i].classList.remove("flag-icon-il");
+        flag[i].classList.remove("flag-icon-in");
+        flag[i].classList.remove("flag-icon-it");
+        flag[i].classList.remove("flag-icon-jp");
+        flag[i].classList.remove("flag-icon-nl");
+        flag[i].classList.remove("flag-icon-no");
+        flag[i].classList.remove("flag-icon-pe");
+        flag[i].classList.remove("flag-icon-pl");
+        flag[i].classList.remove("flag-icon-rs");
+        flag[i].classList.remove("flag-icon-ru");
+        flag[i].classList.remove("flag-icon-se");
+        flag[i].classList.remove("flag-icon-tr");
+        flag[i].classList.remove("flag-icon-tw");
+        flag[i].classList.remove("flag-icon-ua");
+        flag[i].classList.remove("flag-icon-us");
+        flag[i].classList.remove("flag-icon-vn");
         flag[i].classList.remove("flag-icon-qm");
+        flag[i].classList.remove("hide-content");
         flag[i].classList.add(flags[i]);
     }
 }
