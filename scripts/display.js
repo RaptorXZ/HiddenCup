@@ -7,11 +7,13 @@ function showHC(cup) {
     document.querySelector("#hidden-cup-main-title").classList.add("show-bracket");
     document.querySelector("#qualifier-bracket").classList.remove("show-bracket");
     document.querySelector("#hidden-cup-qualifier-title").classList.remove("show-bracket");
+    document.querySelector(".main-copyright").classList.add("hide-content");
 
     if (cup == 'hc1') {
         document.querySelector("#hidden-cup-main-title").innerHTML = "Hidden Cup 1 Main Event";
         document.querySelector("#hidden-cup-round").innerHTML = "Round of 12 - Best of 5";
         document.querySelector("#hidden-cup-sf").innerHTML = "Semifinals - Best of 5";
+        document.querySelector("#bracket-qualifiers-button").classList.add("hide-content");
         setPlayerNames('hc1');
         setPlayerScores('hc1');
         setMatchDates('hc1');
@@ -25,6 +27,9 @@ function showHC(cup) {
         document.querySelector("#qualifier-round1-title").innerHTML = "Round of 16 - Best of 5";
         document.querySelector("#qualifier-round2-title").innerHTML = "Round of 8 - Best of 5";
         document.querySelector("#qualifier-round3-title").innerHTML = "Final Qualifiers - Best of 7";
+        document.querySelector("#qualifier-round3").classList.remove("zero-opacity");
+        document.querySelector("#bracket-qualifiers-button").classList.remove("hide-content");
+        document.querySelector("#qualifier-round2").classList.remove("hide-after");
         setPlayerNames('hc2');
         setPlayerScores('hc2');
         setMatchDates('hc2');
@@ -37,6 +42,9 @@ function showHC(cup) {
         document.querySelector("#hidden-cup-qualifier-title").innerHTML = "Hidden Cup 3 Qualifiers";
         document.querySelector("#qualifier-round1-title").innerHTML = "Round of 32 - Best of 5";
         document.querySelector("#qualifier-round2-title").innerHTML = "Final Qualifiers - Round of 16 - Best of 7";
+        document.querySelector("#qualifier-round3").classList.add("zero-opacity");
+        document.querySelector("#bracket-qualifiers-button").classList.remove("hide-content");
+        document.querySelector("#qualifier-round2").classList.add("hide-after");
         setPlayerNames('hc3');
         setPlayerScores('hc3');
         setMatchDates('hc3');
@@ -50,6 +58,9 @@ function showHC(cup) {
         document.querySelector("#qualifier-round1-title").innerHTML = "Round of 64 - Best of 5";
         document.querySelector("#qualifier-round2-title").innerHTML = "Round of 32 - Best of 5";
         document.querySelector("#qualifier-round3-title").innerHTML = "Final Qualifiers - Round of 16 - Best of 7";
+        document.querySelector("#qualifier-round3").classList.remove("zero-opacity");
+        document.querySelector("#bracket-qualifiers-button").classList.remove("hide-content");
+        document.querySelector("#qualifier-round2").classList.remove("hide-after");
         setPlayerNames('hc4');
         setPlayerScores('hc4');
         setMatchDates('hc4');
@@ -288,6 +299,17 @@ function setPlayerFlags(cup) {
         flag[i].classList.remove("hide-content");
         flag[i].classList.add(flags[i]);
     }
+}
+
+function showCopyright() {
+    document.querySelector(".main-copyright").classList.remove("hide-content");
+    document.querySelector(".main-countdown").classList.add("hide-content");
+    /* Hide Brackets */
+    document.querySelector(".bracket-hc").classList.remove("show-hc-bracket");
+    document.querySelector("#main-event-bracket").classList.remove("show-bracket");
+    document.querySelector("#hidden-cup-main-title").classList.remove("show-bracket");
+    document.querySelector("#qualifier-bracket").classList.remove("show-bracket");
+    document.querySelector("#hidden-cup-qualifier-title").classList.remove("show-bracket");
 }
 
 // function createQualifierBrackets() {
