@@ -30,6 +30,11 @@ function showHC(cup) {
         document.querySelector("#qualifier-round3").classList.remove("zero-opacity");
         document.querySelector("#bracket-qualifiers-button").classList.remove("hide-content");
         document.querySelector("#qualifier-round2").classList.remove("hide-after");
+        document.querySelector("#qualifier-round1-list").classList.add("hc2-qualifier-r1-hider");
+        document.querySelector("#qualifier-round2-list").classList.add("hc2-qualifier-r2-hider");
+        document.querySelector("#qualifier-round3-list").classList.add("hc2-qualifier-r3-hider");
+        document.querySelector("#qualifier-round1-list").classList.remove("hc3-qualifier-r1-hider");
+        document.querySelector("#qualifier-round2-list").classList.remove("hc3-qualifier-r2-hider");
         setPlayerNames('hc2');
         setPlayerScores('hc2');
         setMatchDates('hc2');
@@ -45,6 +50,11 @@ function showHC(cup) {
         document.querySelector("#qualifier-round3").classList.add("zero-opacity");
         document.querySelector("#bracket-qualifiers-button").classList.remove("hide-content");
         document.querySelector("#qualifier-round2").classList.add("hide-after");
+        document.querySelector("#qualifier-round1-list").classList.remove("hc2-qualifier-r1-hider");
+        document.querySelector("#qualifier-round2-list").classList.remove("hc2-qualifier-r2-hider");
+        document.querySelector("#qualifier-round3-list").classList.remove("hc2-qualifier-r3-hider");
+        document.querySelector("#qualifier-round1-list").classList.add("hc3-qualifier-r1-hider");
+        document.querySelector("#qualifier-round2-list").classList.add("hc3-qualifier-r2-hider");
         setPlayerNames('hc3');
         setPlayerScores('hc3');
         setMatchDates('hc3');
@@ -61,6 +71,11 @@ function showHC(cup) {
         document.querySelector("#qualifier-round3").classList.remove("zero-opacity");
         document.querySelector("#bracket-qualifiers-button").classList.remove("hide-content");
         document.querySelector("#qualifier-round2").classList.remove("hide-after");
+        document.querySelector("#qualifier-round1-list").classList.remove("hc2-qualifier-r1-hider");
+        document.querySelector("#qualifier-round2-list").classList.remove("hc2-qualifier-r2-hider");
+        document.querySelector("#qualifier-round3-list").classList.remove("hc2-qualifier-r3-hider");
+        document.querySelector("#qualifier-round1-list").classList.remove("hc3-qualifier-r1-hider");
+        document.querySelector("#qualifier-round2-list").classList.remove("hc3-qualifier-r2-hider");
         setPlayerNames('hc4');
         setPlayerScores('hc4');
         setMatchDates('hc4');
@@ -104,30 +119,71 @@ function execToggleResults(item, index) {
 }
 
 function setPlayerNames(cup) {
-    let players;
+    let playernames;
+    let playersqualifier;
     if (cup == 'hc1') {
-        players = ['','Liereyy','DauT','Miguel','','TheViper','Nicov','TaToH',
+        playernames = ['','Liereyy','DauT','Miguel','','TheViper','Nicov','TaToH',
         '','MbL','Yo','RiuT','','Slam','F1Re','Vivi','Liereyy','Miguel','TheViper',
         'Nicov','MbL','RiuT','Slam','F1Re','Miguel','TheViper','MbL','Slam',
         'TheViper','MbL'];
     }
     else if (cup == 'hc2') {
-        players = ['Mr_Yo','TaToH','TheMax','JorDan_23','dogao','Villese','ACCM',
+        playernames = ['Mr_Yo','TaToH','TheMax','JorDan_23','dogao','Villese','ACCM',
         'Liereyy','MbL','DauT','BacT','Tim','TheViper','Nicov','Vivi','Hera',
         'Mr_Yo','TheMax','dogao','Liereyy','MbL','Tim','TheViper','Vivi','TheMax',
         'Liereyy','MbL','TheViper','TheMax','TheViper']
+        playersqualifier = ['dogao','gkt_cloud','Vinchester','Melkor','Twigg',
+        'Daniel','LaaaaaN','yinghua','F1Re','PROject_Belgium','Lyx','St4rk',
+        'JorDan_23','JonSlow','saymyname','miguel',
+        /* 24 Blanks */
+        '','','','','','','','','','','','','','','','','','','','','','','','',
+        '','','','','','','','','','','','','','','','','','','','','','','','',
+        /* 24 Blanks */
+        'dogao','Vinchester','Twigg','LaaaaaN','F1Re','Lyx','JorDan_23','miguel',
+        /* 24 Blanks */
+        '','','','','','','','','','','','','','','','','','','','','','','','',
+        /* Blanks */
+        'dogao','LaaaaaN','F1Re','JorDan_23'];
     }
     else if (cup == 'hc3') {
-        players = ['Vivi','Liereyy','TaToh','Nicov','F1Re','DauT','Hera','LaaaaaN',
+        playernames = ['Vivi','Liereyy','TaToh','Nicov','F1Re','DauT','Hera','LaaaaaN',
         'TheViper','ACCM','Mr_Yo','Villese','MbL','BacT','dogao','TheMax','Liereyy',
         'TaToH','DauT','Hera','TheViper','Mr_Yo','MbL','dogao','TaToH','Hera',
         'TheViper','dogao','Hera','TheViper'];
+        playersqualifier = ['Nicov','Inc','St4rk_','Daniel','LaaaaaN','gkt_cloud',
+        'Vinchester','Fedex','F1Re','Vodka_L_','_Barles_','slam','Villese',
+        'Sitaux','PROject_Belgium','Rubenstock','DauT','Hoang','Tim','Angelinajolie',
+        'BacT','paladin','Lyx','Zuppi','dogao','Ganji','K4SVA','Nili_AoE','ACCM',
+        'Jibatong','saymyname','Noisick',
+        /* 24 Blanks */
+        '','','','','','','','','','','','','','','','','','','','','','','','',
+        '','','','','','','','',
+        /* 8 Blanks */
+        'Nicov','St4rk_','LaaaaaN','Vinchester',
+        'F1Re','_Barles_','Villese','Rubenstock','DauT','Tim','BacT','Lyx','dogao',
+        'K4SVA','ACCM','saymyname']
     }
     else if (cup == 'hc4') {
-        players = ['TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD',
+        playernames = ['TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD',
         'TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD',
         'TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD'];
+        playersqualifier = ['ACCM','The Bloodless','CL','Kasva','Daniel','RiuT',
+        'saymyname','_hallis','Nicov','Scotty','F1Re','GodOfTheGodless','miguel',
+        'Pike','Lyx','St4rk','Villese','Salicum','Zuppi','classicpro','BruH',
+        'Uzzi','LaaaaaN','repard','TheMax','Lucky_rox','Hoang','Running','JorDan_AoE',
+        'Cyclops','Capoch','Nili_AoE','slam','JackK','Noisick','Vodka_L','Vinchester',
+        'Rise','PROject_Belgium','komtan','BacT','Ganji','SongSong','Angelinajolie',
+        'Modri','Overtaken','Fish','Dark','Vivi','Inc','chart','The_Dragonstar',
+        'BadBoy','IBUYPOWER','Sitaux','DracKeN','Hearttt','Mlord','Valas','Rubenstock',
+        'Barles','_Ra_','Tim','Bad Koala','ACCM','CL','Daniel','saymyname',
+        'Nicov','F1Re','miguel','Lyx','Villese','classicpro','BruH','LaaaaaN',
+        'TheMax','Running','JorDan_AoE','Capoch','slam','Vodka_L','Vinchester',
+        'PROject_Belgium','BacT','SongSong','Overtaken','Dark','Vivi',
+        'The_Dragonstar','BadBoy','Sitaux','Hearttt','Rubenstock','Barles','Bad Koala',
+        'ACCM','Daniel','Nicov','Lyx','Villese','LaaaaaN','TheMax','JorDan_AoE',
+        'slam','Vinchester','BacT','Dark','Vivi','BadBoy','Hearttt','Barles'];
     }
+    let players = playernames.concat(playersqualifier);
 
     const a = document.getElementsByClassName("bracket-name");
     const names = Array.from(a);
@@ -137,24 +193,51 @@ function setPlayerNames(cup) {
 }
 
 function setPlayerScores(cup) {
-    let scores;
+    let mainscores;
+    let qualifierscores;
     if (cup == 'hc1') {
-        scores = ['N/A','N/A','1','3','N/A','N/A','3','1','N/A','N/A','2',
+        mainscores = ['N/A','N/A','1','3','N/A','N/A','3','1','N/A','N/A','2',
         '3','N/A','N/A','3','1','2','3','3','0','3','2','3','1','0','3','3','1',
         '4','2']; 
     }
     else if (cup == 'hc2') {
-        scores = ['3','2','3','0','3','1','0','3','3','1','1','3','3','0','3',
+        mainscores = ['3','2','3','0','3','1','0','3','3','1','1','3','3','0','3',
         '1','1','3','2','3','3','0','3','0','3','1','1','3','3','4'];
+        qualifierscores = ['3','1','3','0','3','2','3','1','3','0','3','1','3',
+        '0','0','3',
+        /* 24 Blanks */
+        '','','','','','','','','','','','','','','','','','','','','','','','',
+        '','','','','','','','','','','','','','','','','','','','','','','','',
+        /* 24 Blanks */
+        '3','1','2','3','3','1','3','2',
+        /* 24 Blanks */
+        '','','','','','','','','','','','','','','','','','','','','','','','',
+        /* Blanks */
+        '4','1','1','4'];
     }
     else if (cup == 'hc3') {
-        scores = ['0','3','3','1','1','3','3','1','3','0','3','2','3','0','3',
+        mainscores = ['0','3','3','1','1','3','3','1','3','0','3','2','3','0','3',
         '0','2','3','2','3','3','1','2','3','1','4','4','1','0','4'];
+        qualifierscores = ['3','0','3','0','3','1','3','0','3','1','3','1','3','0',
+        '2','3','2','0','3','2','3','0','3','2','3','0','3','1','3','1','3','1',
+        /* 24 Blanks */
+        '','','','','','','','','','','','','','','','','','','','','','','','',
+        '','','','','','','','',
+        /* 8 Blanks */
+        '4','1','4','1','4','1','4','0','4','1','4','3','4','1','4','2'];
     }
     else if (cup == 'hc4') {
-        scores = ['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0',
+        mainscores = ['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0',
         '0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'];
+        qualifierscores = ['3','1','3','2','W','FF','3','0','3','0','3','0','3',
+        '0','3','0','3','0','0','3','3','0','3','1','3','0','0','3','3','0','3',
+        '1','3','0','1','3','3','0','3','1','3','0','3','1','0','3','2','3','3',
+        '0','1','3','3','0','3','1','3','0','1','3','3','0','2','3','3','0','3',
+        '2','3','2','1','3','3','2','2','3','3','0','3','2','3','0','3','1','3',
+        '0','1','3','3','1','3','2','3','1','3','0','TBD','TBD','TBD','TBD','4',
+        '3','2','4','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD'];
     }
+    let scores = mainscores.concat(qualifierscores);
 
     const a = document.getElementsByClassName("bracket-number");
     const score = Array.from(a);
@@ -219,9 +302,10 @@ function setMatchDates(cup) {
 }
 
 function setPlayerFlags(cup) {
-    let flags;
+    let mainflags;
+    let qualifierflags;
     if (cup == 'hc1') {
-        flags = ['hide-content','flag-icon-at','flag-icon-rs','flag-icon-br',
+        mainflags = ['hide-content','flag-icon-at','flag-icon-rs','flag-icon-br',
         'hide-content','flag-icon-no','flag-icon-ar','flag-icon-es',
         'hide-content','flag-icon-no','flag-icon-cn','flag-icon-br',
         'hide-content','flag-icon-ca','flag-icon-br','flag-icon-cn',
@@ -231,7 +315,7 @@ function setPlayerFlags(cup) {
         'flag-icon-no','flag-icon-no'];
     }
     else if (cup == 'hc2') {
-        flags = ['flag-icon-cn','flag-icon-es','flag-icon-fi','flag-icon-de',
+        mainflags = ['flag-icon-cn','flag-icon-es','flag-icon-fi','flag-icon-de',
         'flag-icon-br','flag-icon-fi','flag-icon-vn','flag-icon-at',
         'flag-icon-no','flag-icon-rs','flag-icon-vn','flag-icon-cn',
         'flag-icon-no','flag-icon-ar','flag-icon-cn','flag-icon-ca',
@@ -239,9 +323,38 @@ function setPlayerFlags(cup) {
         'flag-icon-no','flag-icon-cn','flag-icon-no','flag-icon-cn',
         'flag-icon-fi','flag-icon-at','flag-icon-no','flag-icon-no',
         'flag-icon-fi','flag-icon-no'];
+        qualifierflags = ['flag-icon-br','flag-icon-cl','flag-icon-ru',
+        'flag-icon-ie','flag-icon-ar','flag-icon-us','flag-icon-es',
+        'flag-icon-vn','flag-icon-br','flag-icon-be','flag-icon-vn',
+        'flag-icon-br','flag-icon-de','flag-icon-il','flag-icon-vn',
+        'flag-icon-br',
+        /* 48 Blanks */
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        /* Blanks */
+        'flag-icon-br','flag-icon-ru','flag-icon-ar',
+        'flag-icon-es','flag-icon-br','flag-icon-vn','flag-icon-de',
+        'flag-icon-br',
+        /* 24 Blanks */
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        /* Blanks */
+        'flag-icon-br','flag-icon-es','flag-icon-br',
+        'flag-icon-de'];
     }
     else if (cup == 'hc3') {
-        flags = ['flag-icon-cn','flag-icon-at','flag-icon-es','flag-icon-ar',
+        mainflags = ['flag-icon-cn','flag-icon-at','flag-icon-es','flag-icon-ar',
         'flag-icon-br','flag-icon-rs','flag-icon-ca','flag-icon-es',
         'flag-icon-no','flag-icon-vn','flag-icon-cn','flag-icon-fi',
         'flag-icon-no','flag-icon-vn','flag-icon-br','flag-icon-fi',
@@ -249,16 +362,63 @@ function setPlayerFlags(cup) {
         'flag-icon-no','flag-icon-cn','flag-icon-no','flag-icon-br',
         'flag-icon-es','flag-icon-ca','flag-icon-no','flag-icon-br',
         'flag-icon-ca','flag-icon-no'];
+        qualifierflags = ['flag-icon-ar','flag-icon-us','flag-icon-br',
+        'flag-icon-us','flag-icon-es','flag-icon-tw','flag-icon-ru',
+        'flag-icon-ar','flag-icon-br','flag-icon-it','flag-icon-pl',
+        'flag-icon-ca','flag-icon-fi','flag-icon-fr','flag-icon-be',
+        'flag-icon-fi','flag-icon-rs','flag-icon-vn','flag-icon-cn',
+        'flag-icon-nl','flag-icon-vn','flag-icon-cn','flag-icon-cn',
+        'flag-icon-fi','flag-icon-br','flag-icon-se','flag-icon-tr',
+        'flag-icon-de','flag-icon-vn','flag-icon-cn','flag-icon-vn',
+        'flag-icon-cl',
+        /* 32 Blanks */
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        'flag-icon-qm','flag-icon-qm',
+        /* Blanks */
+        'flag-icon-ar','flag-icon-br','flag-icon-es',
+        'flag-icon-ru','flag-icon-br','flag-icon-pl','flag-icon-fi',
+        'flag-icon-fi','flag-icon-rs','flag-icon-cn','flag-icon-vn',
+        'flag-icon-cn','flag-icon-br','flag-icon-tr','flag-icon-vn',
+        'flag-icon-vn'];
     }
     else if (cup == 'hc4') {
-        flags = ['flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
+        mainflags = ['flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
         'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
         'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
         'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
         'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
         'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
         'flag-icon-qm'];
+        qualifierflags = ['flag-icon-vn','flag-icon-us','flag-icon-cn','flag-icon-tr',
+        'flag-icon-us','flag-icon-br','flag-icon-vn','flag-icon-gb','flag-icon-ar',
+        'flag-icon-us','flag-icon-br','flag-icon-de','flag-icon-br','flag-icon-fi',
+        'flag-icon-cn','flag-icon-br','flag-icon-fi','flag-icon-nl','flag-icon-fi',
+        'flag-icon-ua','flag-icon-br','flag-icon-mx','flag-icon-es','flag-icon-ru',
+        'flag-icon-fi','flag-icon-ar','flag-icon-vn','flag-icon-de','flag-icon-de',
+        'flag-icon-tr','flag-icon-ar','flag-icon-de','flag-icon-ca','flag-icon-pl',
+        'flag-icon-cl','flag-icon-it','flag-icon-ru','flag-icon-it','flag-icon-be',
+        'flag-icon-jp','flag-icon-vn','flag-icon-se','flag-icon-vn','flag-icon-nl',
+        'flag-icon-si','flag-icon-ee','flag-icon-vn','flag-icon-ru','flag-icon-vn',
+        'flag-icon-us','flag-icon-jp','flag-icon-in','flag-icon-vn','flag-icon-cn',
+        'flag-icon-fr','flag-icon-cz','flag-icon-pe','flag-icon-fr','flag-icon-fi',
+        'flag-icon-fi','flag-icon-pl','flag-icon-ca','flag-icon-cn','flag-icon-cn',
+        'flag-icon-vn','flag-icon-cn','flag-icon-us','flag-icon-vn','flag-icon-ar',
+        'flag-icon-br','flag-icon-br','flag-icon-cn','flag-icon-fi','flag-icon-ua',
+        'flag-icon-br','flag-icon-es','flag-icon-fi','flag-icon-de','flag-icon-de',
+        'flag-icon-ar','flag-icon-ca','flag-icon-it','flag-icon-ru','flag-icon-be',
+        'flag-icon-vn','flag-icon-vn','flag-icon-ee','flag-icon-ru','flag-icon-cn',
+        'flag-icon-in','flag-icon-vn','flag-icon-fr','flag-icon-pe','flag-icon-fi',
+        'flag-icon-pl','flag-icon-cn','flag-icon-vn','flag-icon-us','flag-icon-ar',
+        'flag-icon-cn','flag-icon-fi','flag-icon-es','flag-icon-fi','flag-icon-de',
+        'flag-icon-ca','flag-icon-ru','flag-icon-vn','flag-icon-ru','flag-icon-cn',
+        'flag-icon-vn','flag-icon-pe','flag-icon-pl'];
     }
+    let flags = mainflags.concat(qualifierflags);
 
     const a = document.getElementsByClassName("bracket-flag");
     const flag = Array.from(a);

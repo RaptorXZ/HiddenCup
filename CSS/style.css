@@ -580,6 +580,9 @@ h2 {
 .flag-icon-jp {
     background-image: url("../logos/Jp_hd.png");
 }
+.flag-icon-mx {
+    background-image: url("../logos/Mx_hd.png");
+}
 .flag-icon-nl {
     background-image: url("../logos/Nl_hd.png");
 }
@@ -601,6 +604,9 @@ h2 {
 .flag-icon-se {
     background-image: url("../logos/Se_hd.png");
 }
+.flag-icon-si {
+    background-image: url("../logos/Si_hd.png");
+}
 .flag-icon-tr {
     background-image: url("../logos/Tr_hd.png");
 }
@@ -620,7 +626,23 @@ h2 {
     background-image: url("../logos/Qm_hd.png");
 }
 
-@media screen and (min-width: 700px) and (max-width: 900px) {
+.hc2-qualifier-r1-hider .bracket-item:nth-of-type(n+9):nth-of-type(-n+32) {
+    display: none !important;
+}
+.hc2-qualifier-r2-hider .bracket-item:nth-of-type(n+5):nth-of-type(-n+16) {
+    display: none !important;
+}
+.hc2-qualifier-r3-hider .bracket-item:nth-of-type(n+3):nth-of-type(-n+16) {
+    display: none !important;
+}
+.hc3-qualifier-r1-hider .bracket-item:nth-of-type(n+17):nth-of-type(-n+32) {
+    display: none !important;
+}
+.hc3-qualifier-r2-hider .bracket-item:nth-of-type(n+9):nth-of-type(-n+16) {
+    display: none !important;
+}
+
+@media screen and (min-width: 775px) and (max-width: 935px) {
     .bracket-content .bracket-player:last-child .bracket-country {
         flex-direction: row-reverse;
         justify-content: flex-end;
@@ -770,7 +792,7 @@ h2 {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 775px) {
     .bracket-item {
         width: 100%;
     }
