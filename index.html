@@ -14,12 +14,14 @@
         <nav class="navbar">
             <!-- Left Nav - Twitch & YouTube logos/links -->
             <section class="nav-container">
-                <a href="https://www.twitch.tv/t90official" target="_blank"><img id="T90Official" src="logos/t90official.png" alt="T90Official" width="50" height="50"></a>
-                <a class="nav-big" href="https://www.youtube.com/channel/UCZUT79WUUpZlZ-XMF7l4CFg" target="_blank"><img id="YouTube" src="logos/youtube.png" alt="YouTube" width="78" height="17"></a>
+                <a href="index.html">Home</a>
             </section>
             <!-- Center Nav - Home & Tournaments buttons/links -->
             <section class="nav-container">
-                <a class="nav-big" href="index.html">Home</a>
+                <section class="nav-sub-container">
+                    <a class="nav-top-link" href="https://www.twitch.tv/t90official" target="_blank"><img id="T90Official" src="logos/t90official.png" alt="T90Official" width="50" height="50"></a>
+                    <a href="https://www.youtube.com/channel/UCZUT79WUUpZlZ-XMF7l4CFg" target="_blank"><img id="YouTube" src="logos/youtube.png" alt="YouTube" width="96" height="18"></a>
+                </section>
                 <!-- Tournament Dropdown -->
                 <section class="dropdown">
                     <button onclick="navDropdown()" class="navDropBtn">Tournaments <i id="navDropArrow" class="fas fa-caret-down"></i></button>
@@ -32,9 +34,9 @@
                 </section>
             </section>
             <!-- Right Nav - Liquipedia & AoeZone? -->
-            <section class="nav-container">
-                <a class="nav-big" href="https://liquipedia.net/ageofempires/Main_Page" target="_blank">Liquipedia</a>
-                <a class="nav-big" href="https://www.aoezone.net/" target="_blank">AoeZone</a>
+            <section class="nav-container nav-sub-container">
+                <a class="nav-top-link" href="https://liquipedia.net/ageofempires/Main_Page" target="_blank">Liquipedia</a>
+                <a href="https://www.aoezone.net/" target="_blank">AoeZone</a>
             </section>
         </nav>
     </header>
@@ -2850,8 +2852,13 @@
         <section class="bottom-bar">
             <section class="copyright-container">
                 <a href="https://www.twitch.tv/t90official" target="_blank"><img id="T90Official" src="logos/t90official.png" alt="T90Official" width="75" height="75"></a>
+            </section>
+            <section class="copyright-container">
                 <h5>&copy;2021 T90Official. All rights reserved.</h5>
                 <h5>All <a href="#" onclick="showCopyright()">trademarks</a> referenced herein are </h5><h5>the properties of their respective owners.</h5>
+            </section>
+            <section class="copyright-container">
+                <a class="nav-big" href="https://www.youtube.com/channel/UCZUT79WUUpZlZ-XMF7l4CFg" target="_blank"><img id="YouTube" src="logos/youtube.png" alt="YouTube" width="115" height="26"></a>
             </section>
         </section>
     </footer>
