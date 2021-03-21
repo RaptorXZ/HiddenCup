@@ -175,6 +175,36 @@ a:hover {
     display: block;
 }
 
+.ladder-container {
+    height: fit-content;
+    min-height: 70vh;
+    margin-top: 2rem;
+}
+
+.ladder-container input {
+    margin-left: 45vw;
+    margin-right: 0;
+}
+
+.ladder-container button:hover {
+    cursor: pointer;
+}
+
+.ladder-list {
+    color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.ladder-list li {
+    text-align: left;
+    margin-left: 40vw;
+}
+
 .bottom-bar {
     list-style: none;
     display: grid;
@@ -397,6 +427,7 @@ h2 {
     height: 100%;
     min-height: 100%;
     border-bottom: 1px dashed rgb(53, 83, 117);
+    padding-left: 0;
     padding-bottom: 2em;
     margin-bottom: 2em;
     transition: padding 0.2s ease-in-out, margin 0.2s ease-in-out;
@@ -434,7 +465,7 @@ h2 {
     background-color: rgb(17, 29, 56);
     padding: 0.5em 0;
     border: 1px solid transparent;
-    border-radius: 0.1em;
+    border-radius: 0.5em;
     box-shadow: 0 2px 0 0 white;
     outline: none;
     cursor: pointer;
@@ -449,23 +480,32 @@ h2 {
 
 .bracket-content {
     display: flex;
+    /* Test */
+    flex-direction: column;
 }
-.bracket-content::after {
+/* .bracket-content::after {
     color: white;
     content: ':';
     width: 1em;
     text-align: center;
     padding: 0.2em 0.1em;
-}
+} */
 .bracket-content .bracket-player:first-child {
     width: 50%;
     order: 0;
-    text-align: right;
+    text-align: left;
 }
 .bracket-content .bracket-player:first-child .bracket-country {
     order: 2;
     justify-content: flex-end;
 }
+
+/* Test */
+.bracket-content .bracket-player:last-child .bracket-country {
+    order: 2;
+    justify-content: flex-end;
+}
+
 .bracket-content .bracket-player:first-child .bracket-score {
     order: 0;
 }
@@ -475,7 +515,9 @@ h2 {
     text-align: left;
 }
 .bracket-content .bracket-player:last-child .bracket-country {
-    flex-direction: row-reverse;
+    /* Test */
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
     justify-content: flex-end;
 }
 
@@ -493,20 +535,20 @@ h2 {
 .bracket-player {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .bracket-player:first-child .bracket-score {
-    flex-direction: row-reverse;
     padding-left: 0.75em;
 }
 .bracket-player:last-child .bracket-score {
-    padding-right: 0.75em;
+    padding-left: 0.75em;
 }
 
 .bracket-country {
     font-size: 0.9rem;
     display: flex;
     margin-top: 0.5em;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -516,7 +558,7 @@ h2 {
     font-weight: 600;
     border: 0;
     text-decoration: none;
-    text-align: center;
+    text-align: left;
     transition: padding 0.2s ease-in-out;
 }
 
@@ -552,6 +594,7 @@ h2 {
     background-size: contain;
     background-position: 50%;
     background-repeat: no-repeat;
+    margin-left: auto;
 }
 .flag-icon-ar {
     background-image: url("../logos/Ar_hd.png");
@@ -676,7 +719,7 @@ h2 {
 }
 
 @media screen and (min-width: 775px) and (max-width: 935px) {
-    .bracket-content .bracket-player:last-child .bracket-country {
+    /* .bracket-content .bracket-player:last-child .bracket-country {
         flex-direction: row-reverse;
         justify-content: flex-end;
     }
@@ -685,11 +728,11 @@ h2 {
     }
     .bracket-content .bracket-player:last-child {
         flex-direction: column-reverse;
-    }
+    } */
 }
 
 @media screen and (max-width: 500px) {
-    .bracket-content .bracket-player:last-child .bracket-country {
+    /* .bracket-content .bracket-player:last-child .bracket-country {
         flex-direction: row-reverse;
         justify-content: flex-end;
     }
@@ -698,7 +741,7 @@ h2 {
     }
     .bracket-content .bracket-player:last-child {
         flex-direction: column-reverse;
-    }
+    } */
 }
 
 @media screen and (min-width: 1250px) {
@@ -786,7 +829,7 @@ h2 {
     .bracket-content::after {
         order: 1;
     }
-    .bracket-content .bracket-player:last-child .bracket-country {
+    /* .bracket-content .bracket-player:last-child .bracket-country {
         flex-direction: row-reverse;
         justify-content: flex-end;
     }
@@ -795,7 +838,7 @@ h2 {
     }
     .bracket-content .bracket-player:last-child {
         flex-direction: column-reverse;
-    }
+    } */
 
     .hide-after .bracket-item::after {
         display: none !important;
@@ -917,7 +960,7 @@ h2 {
 }
 
 @media screen and (min-width: 1700px) {
-    .bracket-content .bracket-player:last-child .bracket-country {
+    /* .bracket-content .bracket-player:last-child .bracket-country {
         flex-direction: row-reverse;
         justify-content: flex-end;
     }
@@ -926,5 +969,5 @@ h2 {
     }
     .bracket-content .bracket-player:last-child {
         flex-direction: row-reverse;
-    }
+    } */
 }

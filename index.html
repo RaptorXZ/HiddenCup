@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hidden Cup</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/ico" href="logos/favicon.ico">
 </head>
 <body>
     <!-- Start of Header -->
     <header>
         <!-- Navbar -->
         <nav class="navbar">
-            <!-- Left Nav - Twitch & YouTube logos/links -->
+            <!-- Left Nav - Home -->
             <section class="nav-container">
                 <a href="index.html">Home</a>
             </section>
-            <!-- Center Nav - Home & Tournaments buttons/links -->
+            <!-- Center Nav - Twitch & YouTube logos/links& Tournaments buttons/links -->
             <section class="nav-container">
                 <section class="nav-sub-container">
                     <a class="nav-top-link" href="https://www.twitch.tv/t90official" target="_blank"><img id="T90Official" src="logos/t90official.png" alt="T90Official" width="50" height="50"></a>
@@ -33,8 +34,9 @@
                     </div>
                 </section>
             </section>
-            <!-- Right Nav - Liquipedia & AoeZone? -->
+            <!-- Right Nav - Liquipedia & AoeZone -->
             <section class="nav-container nav-sub-container">
+                <a href="#Ladder" onclick="showLadder()">Ladder</a>
                 <a class="nav-top-link" href="https://liquipedia.net/ageofempires/Main_Page" target="_blank">Liquipedia</a>
                 <a href="https://www.aoezone.net/" target="_blank">AoeZone</a>
             </section>
@@ -77,6 +79,19 @@
                 <a href="https://www.linkedin.com/in/patrik-jarnesand/" target="_blank">Patrik Jarnesand</a>, 
                 Frontend Developer.
             </p>
+        </section>
+        <!-- Ladder -->
+        <section class="ladder-container hide-content">
+            <section>
+                <input type="text" placeholder="Find player..." name="search" required id="input-player-search">
+                <button type="submit" id="btn-player-search"><i class="fa fa-search"></i></button>
+            </section>
+            <h1>Age of Empires 2: Definitive Edition<br>Ranked Ladder</h1>
+            <ul class="ladder-list">
+                <li>#1 - Hera</li>
+                <li>#2 - MbL</li>
+                <li>#3 - TheViper</li>
+            </ul>
         </section>
         <!-- Brackets -->
         <section class="bracket-hc">

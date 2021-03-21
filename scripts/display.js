@@ -1,3 +1,8 @@
+document.querySelector("#input-player-search").addEventListener("keyup", searchEnter);
+document.querySelector("#btn-player-search").addEventListener("click", searchLadder);
+
+const ladderList = document.querySelector(".ladder-list");
+
 function showHC(cup) {
     document.querySelector(".bracket-hc").classList.add("show-hc-bracket");
     document.querySelector("#main-event-bracket").classList.add("show-bracket");
@@ -164,9 +169,12 @@ function setPlayerNames(cup) {
         'K4SVA','ACCM','saymyname']
     }
     else if (cup == 'hc4') {
-        playernames = ['TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD',
-        'TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD',
-        'TBD','TBD','TBD','TBD','TBD','TBD','TBD','TBD'];
+        playernames = ['Warwolf','Jacqueline of Hainaut','Admiral Yi Sun-shin',
+        'Master of the Templar','Harald Hardraade','Sundjata','Pope Leo I','Gonzalo Pizarro',
+        'King Bela IV','Ivaylo','Cobra Car','Edward Longshanks','Le Loi',
+        'John the Fearless','Philip the Good','Little John',
+        'TBD','TBD','TBD','TBD','TBD','TBD','TBD',
+        'TBD','TBD','TBD','TBD','TBD','TBD','TBD'];
         playersqualifier = ['ACCM','The Bloodless','CL','Kasva','Daniel','RiuT',
         'saymyname','_hallis','Nicov','Scotty','F1Re','GodOfTheGodless','miguel',
         'Pike','Lyx','St4rk','Villese','Salicum','Zuppi','classicpro','BruH',
@@ -470,6 +478,75 @@ function showCopyright() {
     document.querySelector("#hidden-cup-main-title").classList.remove("show-bracket");
     document.querySelector("#qualifier-bracket").classList.remove("show-bracket");
     document.querySelector("#hidden-cup-qualifier-title").classList.remove("show-bracket");
+}
+
+function showLadder() {
+    document.querySelector(".ladder-container").classList.remove("hide-content");
+    document.querySelector(".main-copyright").classList.add("hide-content");
+    document.querySelector(".main-countdown").classList.add("hide-content");
+    /* Hide Brackets */
+    document.querySelector(".bracket-hc").classList.remove("show-hc-bracket");
+    document.querySelector("#main-event-bracket").classList.remove("show-bracket");
+    document.querySelector("#hidden-cup-main-title").classList.remove("show-bracket");
+    document.querySelector("#qualifier-bracket").classList.remove("show-bracket");
+    document.querySelector("#hidden-cup-qualifier-title").classList.remove("show-bracket");
+    
+    ladderList.innerHTML = "";
+    fetchLadder();
+}
+
+function fetchLadder() {
+    fetch(`https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=3&start=1&count=100`)
+        .then(res => res.json())
+        .then(data => validatePlayer(data.leaderboard));
+}
+
+function validatePlayer(leaderboards) {
+    if(leaderboards[0] == undefined)
+    {
+        const newLi = document.createElement("li");
+        newLi.innerText = "No player found";
+        document.querySelector(".ladder-list").appendChild(newLi);
+    }
+    else {
+        leaderboards.forEach(populateLadder);
+    }
+}
+
+function populateLadder(item, index) {
+    const newLi = document.createElement("li");
+
+    if(item == undefined) {
+        newLi.innerText = "No player found";
+        document.querySelector(".ladder-list").appendChild(newLi);
+    }
+    else {
+        newLi.innerText = "#" + item.rank + " " + item.name + ", " + item.rating;
+        document.querySelector(".ladder-list").appendChild(newLi);
+    }
+}
+
+function searchEnter(e) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (e.keyCode === 13) {
+        // Cancel the default action, if needed
+        e.preventDefault();
+        // Trigger the button element with a click
+        document.querySelector("#btn-player-search").click();
+    }
+}
+
+function searchLadder() {
+    const player = document.querySelector("#input-player-search").value;
+    document.querySelector("#input-player-search").value = "";
+    searchAPI(player);
+}
+
+function searchAPI(search) {
+    ladderList.innerHTML = "";
+    fetch(`https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=3&count=100&search=` + [search])
+        .then(res => res.json())
+        .then(data => validatePlayer(data.leaderboard));
 }
 
 // function createQualifierBrackets() {
