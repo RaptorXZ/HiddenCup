@@ -1,5 +1,6 @@
 document.querySelector("#input-player-search").addEventListener("keyup", searchEnter);
 document.querySelector("#btn-player-search").addEventListener("click", searchLadder);
+document.querySelector("#ladder-btn").addEventListener("click", showLadder);
 
 const ladderList = document.querySelector(".ladder-list");
 
@@ -481,6 +482,7 @@ function showCopyright() {
 }
 
 function showLadder() {
+    document.querySelector("#ladder-btn").removeEventListener("click", showLadder);
     document.querySelector(".ladder-container").classList.remove("hide-content");
     document.querySelector(".main-copyright").classList.add("hide-content");
     document.querySelector(".main-countdown").classList.add("hide-content");
@@ -498,7 +500,7 @@ function showLadder() {
 function fetchLadder() {
     fetch(`https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=3&start=1&count=100`)
         .then(res => res.json())
-        .then(data => validatePlayer(data.leaderboard));
+        .then(data => validatePlayer(data.leaderboard))
 }
 
 function validatePlayer(leaderboards) {
@@ -507,23 +509,19 @@ function validatePlayer(leaderboards) {
         const newLi = document.createElement("li");
         newLi.innerText = "No player found";
         document.querySelector(".ladder-list").appendChild(newLi);
+        document.querySelector("#ladder-btn").addEventListener("click", showLadder);
     }
     else {
-        leaderboards.forEach(populateLadder);
+        leaderboards.forEach(populateLadder)
+        document.querySelector("#ladder-btn").addEventListener("click", showLadder);
     }
 }
 
 function populateLadder(item, index) {
     const newLi = document.createElement("li");
 
-    if(item == undefined) {
-        newLi.innerText = "No player found";
-        document.querySelector(".ladder-list").appendChild(newLi);
-    }
-    else {
-        newLi.innerText = "#" + item.rank + " " + item.name + ", " + item.rating;
-        document.querySelector(".ladder-list").appendChild(newLi);
-    }
+    newLi.innerText = "#" + item.rank + " " + item.name + ", " + item.rating;
+    document.querySelector(".ladder-list").appendChild(newLi);
 }
 
 function searchEnter(e) {
