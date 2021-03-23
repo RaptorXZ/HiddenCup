@@ -520,9 +520,20 @@ function validatePlayer(leaderboards) {
 
 function populateLadder(item, index) {
     const newLi = document.createElement("li");
+    const newRank = document.createElement("span");
+    const newName = document.createElement("span");
+    const newRating = document.createElement("span");
+    newRank.classList.add("rank-span");
+    newName.classList.add("name-span");
+    newRating.classList.add("rating-span");
 
-    newLi.innerText = "#" + item.rank + " " + item.name + ", " + item.rating;
+    newRank.innerText = "#" + item.rank;
+    newName.innerText = " " + item.name + ", ";
+    newRating.innerText = item.rating;
     document.querySelector(".ladder-list").appendChild(newLi);
+    newLi.appendChild(newRank);
+    newLi.appendChild(newName);
+    newLi.appendChild(newRating);
 }
 
 function searchEnter(e) {
