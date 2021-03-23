@@ -5,6 +5,7 @@ document.querySelector("#ladder-btn").addEventListener("click", showLadder);
 const ladderList = document.querySelector(".ladder-list");
 
 function showHC(cup) {
+    document.querySelector(".ladder-container").classList.add("hide-content");
     document.querySelector(".bracket-hc").classList.add("show-hc-bracket");
     document.querySelector("#main-event-bracket").classList.add("show-bracket");
     document.querySelector(".main-countdown").classList.add("hide-content");
@@ -473,6 +474,7 @@ function setPlayerFlags(cup) {
 
 function showCopyright() {
     document.querySelector(".main-copyright").classList.remove("hide-content");
+    document.querySelector(".ladder-container").classList.add("hide-content");
     document.querySelector(".main-countdown").classList.add("hide-content");
     /* Hide Brackets */
     document.querySelector(".bracket-hc").classList.remove("show-hc-bracket");
