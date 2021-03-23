@@ -174,8 +174,9 @@ function setPlayerNames(cup) {
         'Master of the Templar','Harald Hardraade','Sundjata','Pope Leo I','Gonzalo Pizarro',
         'King Bela IV','Ivaylo','Cobra Car','Edward Longshanks','Le Loi',
         'John the Fearless','Philip the Good','Little John',
-        'TBD','TBD','TBD','TBD','TBD','TBD','TBD',
-        'TBD','TBD','TBD','TBD','TBD','TBD','TBD'];
+        'Warwolf','Admiral Yi Sun-shin','Sundjata','Gonzalo Pizarro','Ivaylo',
+        'Edward Longshanks','John the Fearless','Philip the Good','Admiral Yi Sun-shin',
+        'Sundjata','Ivaylo','John the Fearless','Admiral Yi Sun-shin','John the Fearless'];
         playersqualifier = ['ACCM','The Bloodless','CL','Kasva','Daniel','RiuT',
         'saymyname','_hallis','Nicov','Scotty','F1Re','GodOfTheGodless','miguel',
         'Pike','Lyx','St4rk','Villese','Salicum','Zuppi','classicpro','BruH',
@@ -236,8 +237,8 @@ function setPlayerScores(cup) {
         '4','1','4','1','4','1','4','0','4','1','4','3','4','1','4','2'];
     }
     else if (cup == 'hc4') {
-        mainscores = ['0','0','0','0','0','0','0','0','0','0','0','0','0','0','0',
-        '0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'];
+        mainscores = ['3','1','3','1','1','3','2','3','0','3','1','3','2','3','3',
+        '1','1','3','3','1','3','0','3','1','4','1','3','4','1','4'];
         qualifierscores = ['3','1','3','2','W','FF','3','0','3','0','3','0','3',
         '0','3','0','3','0','0','3','3','0','3','1','3','0','0','3','3','0','3',
         '1','3','0','1','3','3','0','3','1','3','0','3','1','0','3','2','3','3',

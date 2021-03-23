@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
 body {
     min-height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
     background-color: #406380;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 main {
     min-height: 65vh;
     height: max-content;
+    width: 100%;
 }
 
 .main-countdown::before {
@@ -90,7 +94,7 @@ main {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    max-width: 100%;
+    max-width: 100vw;
     padding: 0;
     background: transparent;
     color: white;
@@ -211,6 +215,8 @@ a:hover {
     grid-template-columns: 1fr 1fr 1fr;
     color: white;
     margin: auto;
+    width: 100%;
+    max-width: 100vw;
 }
 
 footer {
@@ -219,8 +225,12 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
+    max-width: 100vw;
     border-top: 2px solid rgb(163, 163, 163);
     padding: 1rem;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .copyright-container {
