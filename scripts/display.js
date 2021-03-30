@@ -261,20 +261,22 @@ function setMatchDates(cup) {
     let dates;
     let datetimes;
     if (cup == 'hc1') {
-        dates = ['N/A','28 September 2018','N/A','28 September 2018','N/A',
-        '28 September 2018','N/A','29 September 2018','29 September 2018',
-        '29 September 2018','29 September 2018','30 September 2018','30 September 2018',
-        '30 September 2018','1 October 2018'];
+        // dates = ['N/A','28 September 2018','N/A','28 September 2018','N/A',
+        // '28 September 2018','N/A','29 September 2018','29 September 2018',
+        // '29 September 2018','29 September 2018','30 September 2018','30 September 2018',
+        // '30 September 2018','1 October 2018'];
+        dates = ['','','','','','','','','','','','','','',''];
 
         datetimes = ['N/A','2018-09-28','N/A','2018-09-28','N/A','2018-09-28',
         'N/A','2018-09-29','2018-09-29','2018-09-29','2018-09-29','2018-09-30',
         '2018-09-30','2018-09-30','2018-10-01'];
     }
     if (cup == 'hc2') {
-        dates = ['11 April 2019','11 April 2019','11 April 2019','12 April 2019',
-        '12 April 2019','12 April 2019','12 April 2019','13 April 2019',
-        '13 April 2019','13 April 2019','13 April 2019','14 April 2019',
-        '14 April 2019','14 April 2019','14 April 2019'];
+        // dates = ['11 April 2019','11 April 2019','11 April 2019','12 April 2019',
+        // '12 April 2019','12 April 2019','12 April 2019','13 April 2019',
+        // '13 April 2019','13 April 2019','13 April 2019','14 April 2019',
+        // '14 April 2019','14 April 2019','14 April 2019'];
+        dates = ['','','','','','','','','','','','','','',''];
 
         datetimes = ['2019-04-11','2019-04-11','2019-04-11','2019-04-12',
         '2019-04-12','2019-04-12','2019-04-12','2019-04-13','2019-04-13',
@@ -282,10 +284,11 @@ function setMatchDates(cup) {
         '2019-04-14'];
     }
     if (cup == 'hc3') {
-        dates = ['19 March 2020','19 March 2020','19 March 2020','19 March 2020',
-        '20 March 2020','20 March 2020','20 March 2020','20 March 2020',
-        '21 March 2020','21 March 2020','21 March 2020','21 March 2020',
-        '22 March 2020','22 March 2020','22 March 2020'];
+        // dates = ['19 March 2020','19 March 2020','19 March 2020','19 March 2020',
+        // '20 March 2020','20 March 2020','20 March 2020','20 March 2020',
+        // '21 March 2020','21 March 2020','21 March 2020','21 March 2020',
+        // '22 March 2020','22 March 2020','22 March 2020'];
+        dates = ['','','','','','','','','','','','','','',''];
 
         datetimes = ['2020-03-19','2020-03-19','2020-03-19','2020-03-19',
         '2020-03-20','2020-03-20','2020-03-20','2020-03-20','2020-03-21',
@@ -293,10 +296,11 @@ function setMatchDates(cup) {
         '2020-03-22'];
     }
     if (cup == 'hc4') {
-        dates = ['18 March 2021','18 March 2021','18 March 2021','18 March 2021',
-        '19 March 2021','19 March 2021','19 March 2021','19 March 2021',
-        '20 March 2021','20 March 2021','20 March 2021','20 March 2021',
-        '21 March 2021','21 March 2021','21 March 2021'];
+        // dates = ['18 March 2021','18 March 2021','18 March 2021','18 March 2021',
+        // '19 March 2021','19 March 2021','19 March 2021','19 March 2021',
+        // '20 March 2021','20 March 2021','20 March 2021','20 March 2021',
+        // '21 March 2021','21 March 2021','21 March 2021'];
+        dates = ['','','','','','','','','','','','','','',''];
 
         datetimes = ['2021-03-18','2021-03-18','2021-03-18','2021-03-18',
         '2021-03-19','2021-03-19','2021-03-19','2021-03-19','2021-03-20',

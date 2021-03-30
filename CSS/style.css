@@ -186,7 +186,8 @@ a:hover {
 }
 
 .link-tilt {
-    transition: transform 2s;
+    transition: transform 300ms;
+    transition-timing-function: linear;
 }
 
 .link-tilt:hover {
@@ -208,15 +209,6 @@ a:hover {
 
 .ladder-container input:focus {
     width: 300px;
-}
-
-.ladder-container button {
-    transition: transform 2s;
-}
-
-.ladder-container button:hover {
-    cursor: pointer;
-    transform: rotate(15deg);
 }
 
 .ladder-list {
@@ -529,7 +521,6 @@ h2 {
 
 .bracket-content {
     display: flex;
-    /* Test */
     flex-direction: column;
 }
 /* .bracket-content::after {
@@ -578,13 +569,13 @@ h2 {
     font-size: 0.8rem;
     color: white;
     font-weight: 300;
-    padding-bottom: 0.75em;
+    /* padding-bottom: 0.75em; */
 }
 
 .bracket-player {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 .bracket-player:first-child .bracket-score {
     padding-left: 0.75em;
