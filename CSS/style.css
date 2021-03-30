@@ -531,9 +531,10 @@ h2 {
     padding: 0.2em 0.1em;
 } */
 .bracket-content .bracket-player:first-child {
-    width: 50%;
+    width: 100%;
     order: 0;
     text-align: left;
+    padding-right: 0.5em;
 }
 .bracket-content .bracket-player:first-child .bracket-country {
     order: 2;
@@ -550,9 +551,10 @@ h2 {
     order: 0;
 }
 .bracket-content .bracket-player:last-child {
-    width: 50%;
+    width: 100%;
     order: 2;
     text-align: left;
+    padding-right: 0.5em;
 }
 .bracket-content .bracket-player:last-child .bracket-country {
     /* Test */
