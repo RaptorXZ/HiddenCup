@@ -242,8 +242,7 @@ a:hover {
 
 .bottom-bar {
     list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     color: white;
     margin: auto;
     width: 100%;
