@@ -242,7 +242,6 @@ a:hover {
 
 .bottom-bar {
     list-style: none;
-    display: flex;
     color: white;
     margin: auto;
     width: 100%;
