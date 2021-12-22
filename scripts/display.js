@@ -406,7 +406,7 @@ function setPlayerFlags(cup) {
         'flag-icon-ru','flag-icon-cn','flag-icon-fi','flag-icon-si','flag-icon-br',
         'flag-icon-no','flag-icon-cn','flag-icon-vn','flag-icon-es','flag-icon-ca',
         'flag-icon-at','flag-icon-ar','flag-icon-vn','flag-icon-de','flag-icon-cn',
-        'flag-icon-si','flag-icon-no','flag-icon-vn','flag-icon-ca','flag-icon-ar',
+        'flag-icon-si','flag-icon-no','flag-icon-vn','flag-icon-ca','flag-icon-at',
         'flag-icon-de','flag-icon-cn','flag-icon-no','flag-icon-ca','flag-icon-de',
         'flag-icon-ca'];
         qualifierflags = ['flag-icon-vn','flag-icon-us','flag-icon-cn','flag-icon-tr',
