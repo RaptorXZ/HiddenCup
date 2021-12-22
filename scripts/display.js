@@ -171,13 +171,13 @@ function setPlayerNames(cup) {
         'K4SVA','ACCM','saymyname']
     }
     else if (cup == 'hc4') {
-        playernames = ['Warwolf','Jacqueline of Hainaut','Admiral Yi Sun-shin',
-        'Master of the Templar','Harald Hardraade','Sundjata','Pope Leo I','Gonzalo Pizarro',
-        'King Bela IV','Ivaylo','Cobra Car','Edward Longshanks','Le Loi',
-        'John the Fearless','Philip the Good','Little John',
-        'Warwolf','Admiral Yi Sun-shin','Sundjata','Gonzalo Pizarro','Ivaylo',
-        'Edward Longshanks','John the Fearless','Philip the Good','Admiral Yi Sun-shin',
-        'Sundjata','Ivaylo','John the Fearless','Admiral Yi Sun-shin','John the Fearless'];
+        playernames = ['ACCM','Barles','JorDan_AoE',
+        'MbL','Vinchester','Mr_Yo','Villese','Daut',
+        'dogao','TheViper','Vivi','BacT','TaToH',
+        'Hera','Liereyy','Nicov',
+        'ACCM','JorDan_AoE','Mr_Yo','Daut','TheViper',
+        'BacT','Hera','Liereyy','JorDan_AoE',
+        'Mr_Yo','TheViper','Hera','JorDan_AoE','Hera'];
         playersqualifier = ['ACCM','The Bloodless','CL','Kasva','Daniel','RiuT',
         'saymyname','_hallis','Nicov','Scotty','F1Re','GodOfTheGodless','miguel',
         'Pike','Lyx','St4rk','Villese','Salicum','Zuppi','classicpro','BruH',
@@ -402,13 +402,13 @@ function setPlayerFlags(cup) {
         'flag-icon-vn'];
     }
     else if (cup == 'hc4') {
-        mainflags = ['flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
-        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
-        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
-        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
-        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
-        'flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm','flag-icon-qm',
-        'flag-icon-qm'];
+        mainflags = ['flag-icon-vn','flag-icon-pl','flag-icon-de','flag-icon-no',
+        'flag-icon-ru','flag-icon-cn','flag-icon-fi','flag-icon-si','flag-icon-br',
+        'flag-icon-no','flag-icon-cn','flag-icon-vn','flag-icon-es','flag-icon-ca',
+        'flag-icon-at','flag-icon-ar','flag-icon-vn','flag-icon-de','flag-icon-cn',
+        'flag-icon-si','flag-icon-no','flag-icon-vn','flag-icon-ca','flag-icon-ar',
+        'flag-icon-de','flag-icon-cn','flag-icon-no','flag-icon-ca','flag-icon-de',
+        'flag-icon-ca'];
         qualifierflags = ['flag-icon-vn','flag-icon-us','flag-icon-cn','flag-icon-tr',
         'flag-icon-us','flag-icon-br','flag-icon-vn','flag-icon-gb','flag-icon-ar',
         'flag-icon-us','flag-icon-br','flag-icon-de','flag-icon-br','flag-icon-fi',
