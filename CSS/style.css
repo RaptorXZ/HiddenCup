@@ -189,11 +189,11 @@ a:hover {
     transition: transform 300ms;
     transition-timing-function: linear;
 }
-
+/*
 .link-tilt:hover {
     transform: rotate(10deg);
 }
-
+*/
 .ladder-container {
     height: fit-content;
     min-height: 70vh;
